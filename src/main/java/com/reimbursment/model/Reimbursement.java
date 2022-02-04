@@ -1,89 +1,140 @@
 package com.reimbursment.model;
 
-import com.reimbursment.Reimbursement_type;
 import java.util.Date;
 
 public class Reimbursement {
-    private int reimb_id ;
+    private int reimbId ;
     private float amount;
-    private Date reimb_submitted;
-    private Date reimb_resolve;
-    private String reimb_descrip;
-    private int reimb_reciept;
-    private User reimb_author;
-    private User reimb_resolver;
-    private int status_id;
-    private Reimbursement_type reimb_type_id;
+    private Date reimbSubmitted;
+    private Date reimbResolved;
+    private String reimbDescription;
+    private int reimbReciept;
+    private User reimbAuthor;
+    private User reimbResolver;
+    private ReimbursementStatus reimbStatus;
+    private ReimbursementType reimbType;
 
     public Reimbursement(){
     }
 
-    public Reimbursement(int reimb_id, float amount, Date reimb_submitted, Date reimb_resolve, String reimb_descrip, int reimb_reciept, User reimb_author, User reimb_resolver, int status_id, Reimbursement_type reimb_type_id) {
-        this.reimb_id = reimb_id;
+    public Reimbursement(int reimbId, float amount, Date reimbSubmitted, Date reimbResolved, String reimbDescription, int reimbReciept, User reimbAuthor, User reimbResolver, ReimbursementStatus reimbStatus, ReimbursementType reimbType) {
+        this.reimbId = reimbId;
         this.amount = amount;
-        this.reimb_submitted = reimb_submitted;
-        this.reimb_resolve = reimb_resolve;
-        this.reimb_descrip = reimb_descrip;
-        this.reimb_reciept = reimb_reciept;
-        this.reimb_author = reimb_author;
-        this.reimb_resolver = reimb_resolver;
-        this.status_id = status_id;
-        this.reimb_type_id = reimb_type_id;
+        this.reimbSubmitted = reimbSubmitted;
+        this.reimbResolved = reimbResolved;
+        this.reimbDescription = reimbDescription;
+        this.reimbReciept = reimbReciept;
+        this.reimbAuthor = reimbAuthor;
+        this.reimbResolver = reimbResolver;
+        this.reimbStatus = reimbStatus;
+        this.reimbType = reimbType;
     }
 
-    public int getReimb_id() { return reimb_id; }
+    public Reimbursement(float amount, Date reimbSubmitted, Date reimbResolved, String reimbDescription, int reimbReciept, User reimbAuthor, User reimbResolver, ReimbursementStatus reimbStatus, ReimbursementType reimbType) {
+        this.amount = amount;
+        this.reimbSubmitted = reimbSubmitted;
+        this.reimbResolved = reimbResolved;
+        this.reimbDescription = reimbDescription;
+        this.reimbReciept = reimbReciept;
+        this.reimbAuthor = reimbAuthor;
+        this.reimbResolver = reimbResolver;
+        this.reimbStatus = reimbStatus;
+        this.reimbType = reimbType;
+    }
 
-    public void setReimb_id(int reimb_id) { this.reimb_id = reimb_id; }
+    public int getReimbId() {
+        return reimbId;
+    }
 
-    public float getAmount() { return amount; }
+    public void setReimbId(int reimbId) {
+        this.reimbId = reimbId;
+    }
 
-    public void setAmount(float amount) {this.amount = amount; }
+    public float getAmount() {
+        return amount;
+    }
 
-    public Date getReimb_submitted() { return reimb_submitted;  }
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
 
-    public void setReimb_submitted(Date reimb_submitted) { this.reimb_submitted = reimb_submitted; }
+    public Date getReimbSubmitted() {
+        return reimbSubmitted;
+    }
 
-    public Date getReimb_resolve() { return reimb_resolve;  }
+    public void setReimbSubmitted(Date reimbSubmitted) {
+        this.reimbSubmitted = reimbSubmitted;
+    }
 
-    public void setReimb_resolve(Date reimb_resolve) {  this.reimb_resolve = reimb_resolve; }
+    public Date getReimbResolved() {
+        return reimbResolved;
+    }
 
-    public String getReimb_descrip() { return reimb_descrip; }
+    public void setReimbResolved(Date reimbResolved) {
+        this.reimbResolved = reimbResolved;
+    }
 
-    public void setReimb_descrip(String reimb_descrip) { this.reimb_descrip = reimb_descrip;  }
+    public String getReimbDescription() {
+        return reimbDescription;
+    }
 
-    public int getReimb_reciept() { return reimb_reciept; }
+    public void setReimbDescription(String reimbDescription) {
+        this.reimbDescription = reimbDescription;
+    }
 
-    public void setReimb_reciept(int reimb_reciept) { this.reimb_reciept = reimb_reciept;  }
+    public int getReimbReciept() {
+        return reimbReciept;
+    }
 
-    public User getReimb_author() { return reimb_author; }
+    public void setReimbReciept(int reimbReciept) {
+        this.reimbReciept = reimbReciept;
+    }
 
-    public void setReimb_author(User reimb_author) { this.reimb_author = reimb_author;  }
+    public User getReimbAuthor() {
+        return reimbAuthor;
+    }
 
-    public User getReimb_resolver() { return reimb_resolver; }
+    public void setReimbAuthor(User reimbAuthor) {
+        this.reimbAuthor = reimbAuthor;
+    }
 
-    public void setReimb_resolver(User reimb_resolver) { this.reimb_resolver = reimb_resolver; }
+    public User getReimbResolver() {
+        return reimbResolver;
+    }
 
-    public int getStatus_id() { return status_id; }
+    public void setReimbResolver(User reimbResolver) {
+        this.reimbResolver = reimbResolver;
+    }
 
-    public void setStatus_id(int status_id) { this.status_id = status_id; }
+    public ReimbursementStatus getReimbStatus() {
+        return reimbStatus;
+    }
 
-    public Reimbursement_type getReimb_type_id() { return reimb_type_id; }
+    public void setReimbStatus(ReimbursementStatus reimbStatus) {
+        this.reimbStatus = reimbStatus;
+    }
 
-    public void setReimb_type_id(Reimbursement_type reimb_type_id) {this.reimb_type_id = reimb_type_id; }
+    public ReimbursementType getReimbType() {
+        return reimbType;
+    }
+
+    public void setReimbType(ReimbursementType reimbType) {
+        this.reimbType = reimbType;
+    }
 
     @Override
     public String toString() {
         return "Reimbursement{" +
-                "reimb_id=" + reimb_id +
+                "reimbId=" + reimbId +
                 ", amount=" + amount +
-                ", reimb_submitted=" + reimb_submitted +
-                ", reimb_resolve=" + reimb_resolve +
-                ", reimb_descrip='" + reimb_descrip + '\'' +
-                ", reimb_reciept=" + reimb_reciept +
-                ", reimb_author=" + reimb_author +
-                ", reimb_resolver=" + reimb_resolver +
-                ", status_id=" + status_id +
-                ", reimb_type_id=" + reimb_type_id +
+                ", reimbSubmitted=" + reimbSubmitted +
+                ", reimbResolved=" + reimbResolved +
+                ", reimbDescription='" + reimbDescription + '\'' +
+                ", reimbReciept=" + reimbReciept +
+                ", reimbAuthor=" + reimbAuthor +
+                ", reimbResolver=" + reimbResolver +
+                ", reimbStatus=" + reimbStatus +
+                ", reimbType=" + reimbType +
                 '}';
     }
 }
