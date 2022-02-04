@@ -1,6 +1,6 @@
 package com.reimbursment.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Reimbursement {
     private int reimbId ;
@@ -39,6 +39,15 @@ public class Reimbursement {
         this.reimbAuthor = reimbAuthor;
         this.reimbResolver = reimbResolver;
         this.reimbStatus = reimbStatus;
+        this.reimbType = reimbType;
+    }
+
+    public Reimbursement(float amount, Date reimbSubmitted, String reimbDescription, User reimbAuthor, ReimbursementType reimbType) {
+        this.amount = amount;
+        this.reimbSubmitted = reimbSubmitted;
+        this.reimbDescription = reimbDescription;
+        this.reimbAuthor = reimbAuthor;
+        this.reimbStatus = ReimbursementStatus.PENDING;
         this.reimbType = reimbType;
     }
 
