@@ -35,5 +35,9 @@ public class ERSDriver {
 
         Reimbursement testReimbursement= new Reimbursement(197.37f, Date.valueOf("2021-11-19"), "Description", testuser, ReimbursementType.FOOD);
         rd.createReimbursement(testReimbursement);
+
+        User newGuy = ud.getUserByID(11);
+        System.out.println(newGuy.toString());
+
     }
 }

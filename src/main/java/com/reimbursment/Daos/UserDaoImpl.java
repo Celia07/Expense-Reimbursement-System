@@ -99,6 +99,36 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
+    public User getUserByID(int id) {
+        String sql = "Select * from ERS_USERS where ers_users_id = ?";
+        User user = new User();
+
+        try (Connection c = ConnectionUtil.getConnection();) {
+            PreparedStatement s = c.prepareStatement(sql);
+            s.setInt(1, id);
+            ResultSet rs = s.executeQuery();
+
+            if (rs.next()) {
+                user.setUserId(rs.getInt(1));
+                user.setUsername(rs.getString(2));
+                user.setPassword(rs.getString(3));
+                user.setFirstName(rs.getString(4));
+                user.setLastName(rs.getString(5));
+                user.setEmail(rs.getString(6));
+
+                int typeOrdinal = rs.getInt(7);
+                UserRoles[] types = UserRoles.values();
+                user.setUserRole(types[typeOrdinal]);
+
+                return user;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
     public boolean updateUser(User user) {
         String sql = "update ERS_USERS set ers_password = ?, user_first_name = ?, " +
                 "user_last_name = ?, user_email = ?, ers_username = ? where ers_users_id = ?";
