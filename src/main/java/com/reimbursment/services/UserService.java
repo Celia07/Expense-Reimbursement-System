@@ -24,12 +24,11 @@ public class UserService {
     }
 
     public boolean updateOtherInformation(User user, String first, String last, String username, String email){
-        User updatedUser = new User();
-        updatedUser.setFirstName(first);
-        updatedUser.setLastName(last);
-        updatedUser.setEmail(email);
-        updatedUser.setUsername(username);
-        return ud.updateUser(updatedUser);
+        user.setFirstName(first);
+        user.setLastName(last);
+        user.setEmail(email);
+        user.setUsername(username);
+        return ud.updateUser(user);
     }
 
 

@@ -69,8 +69,8 @@ public class ReimbursementDaoImpl implements ReimbursementDao{
     }
 
     @Override
-    public List<Reimbursement> getAllReimbursementsByType(int id) {
-        String sql = "Select * from ERS_REIMBURSEMENT where reimb_type_id = ?";
+    public List<Reimbursement> getAllReimbursementsByStatus(int id) {
+        String sql = "Select * from ERS_REIMBURSEMENT where reimb_status_id = ?";
         List<Reimbursement> reimbursements = new ArrayList<>();
 
         try (Connection c = ConnectionUtil.getConnection();) {
@@ -100,8 +100,8 @@ public class ReimbursementDaoImpl implements ReimbursementDao{
     }
 
     @Override
-    public List<Reimbursement> getAllReimbursementsByUsernameAndType(String username, int id) {
-        String sql = "Select * from ERS_REIMBURSEMENT where reimb_type_id = ? and reimb_author = ?";
+    public List<Reimbursement> getAllReimbursementsByUsernameAndStatus(String username, int id) {
+        String sql = "Select * from ERS_REIMBURSEMENT where reimb_status_id = ? and reimb_author = ?";
         User employee = ud.getUserByUsername(username);
         List<Reimbursement> reimbursements = new ArrayList<>();
 
@@ -129,6 +129,36 @@ public class ReimbursementDaoImpl implements ReimbursementDao{
             e.printStackTrace();
         }
         return reimbursements;
+
+    }
+
+    @Override
+    public Reimbursement getReimbursementById(int id) {
+        String sql = "Select * from ERS_REIMBURSEMENT where reimb_id = ?";
+
+        try (Connection c = ConnectionUtil.getConnection();) {
+            PreparedStatement s = c.prepareStatement(sql);
+            s.setInt(1, id);
+            ResultSet rs = s.executeQuery();
+
+            if (rs.next()) {
+                Reimbursement reimb = new Reimbursement();
+                reimb.setReimbId(rs.getInt(1));
+                reimb.setAmount(rs.getFloat(2));
+                reimb.setReimbSubmitted(rs.getDate(3));
+                reimb.setReimbResolved(rs.getDate(4));
+                reimb.setReimbDescription(rs.getString(5));
+                reimb.setReimbReciept(rs.getInt(6));
+                reimb.setReimbAuthor(ud.getUserByID(rs.getInt(7)));
+                reimb.setReimbResolver(ud.getUserByID(rs.getInt(8)));
+                reimb.setReimbStatus(ReimbursementStatus.values()[rs.getInt(9)]);
+                reimb.setReimbType(ReimbursementType.values()[rs.getInt(10)]);
+                return reimb;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return null;
 
     }
 
