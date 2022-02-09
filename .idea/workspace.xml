@@ -5,70 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc0bdc4-c580-46de-a6d0-de8452c9075a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/05243aa4718aef5e9d70e858d7fda47f795d3c40" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16f1c058084a0ca7e4b5c89776516c2442302c66" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1be2f3f31dc0dff821661661dee5728a99ee35d8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/20e6857b1629f55f31e8706e90dac0cfe31fe73b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43a022b5127d9f07dec181b013d5a4f60454eb14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/470c9a5ad0ec26aeb09b5e6596eed902f1e9e1a4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/59c5cec272a7e3cc01c4b78c8ab72f9eded90065" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7da3ab8a6524df368b8759f045b8d7cb49b55d4a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/9462d6c9e1654fb67a7c814e7712f68e6fb2c818" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/98df2148158c3f558cc0d4817b6ef3bb767e8f42" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a6af4b7d49275ce06c8ff7e99815e52ef11e3d8b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/aed6b052a0ba672aceea1760312cbc694bf894be" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dcc7c4240678e4f29ab8ea30234db11285255425" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Niko test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/UserServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/UserServiceTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-UserServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/Controllers/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/Controllers/ReimbursementController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/Controllers/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/Daos/ReimbursementDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/Daos/ReimbursementDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/Daos/UserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/Daos/UserDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/ERSDriver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/JavalinApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/model/Reimbursement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/model/ReimbursementStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/model/ReimbursementType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/model/UserRoles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/services/AuthService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/services/ReimbursementService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/util/ConnectionUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/util/LoggingSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reimbursement/util/LoggingUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/Expense/Reimbursement/System/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.ReimbursementServiceTest">
     <configuration name="ERSDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.reimbursement.ERSDriver" />
       <module name="Expense-Reimbursement-System.app.main" />
@@ -121,8 +58,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReimbursementServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.assignment.ReimbursementServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ReimbursementServiceTest" />
         <item itemvalue="Application.ERSDriver" />
       </list>
     </recent_temporary>
@@ -137,5 +98,16 @@
       <updated>1644445815148</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
