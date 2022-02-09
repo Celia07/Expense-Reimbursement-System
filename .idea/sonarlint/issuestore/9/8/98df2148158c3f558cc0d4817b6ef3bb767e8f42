@@ -1,0 +1,13 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¨ìƒËüÿÿÿÿ
+1
+java:S3626B"Remove this redundant jump.(ûÁİ…
+S	java:S106:"9Replace this use of System.out or System.err by a logger.(™¬Ÿúúÿÿÿÿ
+]	java:S125G"<This block of commented-out lines of code should be removed.(²âÿÂøÿÿÿÿ8÷ôÚÙí/
+A
+java:S1068"&Remove this unused "ur" private field.(äåƒõùÿÿÿÿ
+j
+java:S1104f"TMake username a static final constant or non-public and provide accessors if needed.(Ü±›Ô
+o
+java:S1104g"TMake password a static final constant or non-public and provide accessors if needed.(¼şòüÿÿÿÿ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘Ï¤(
