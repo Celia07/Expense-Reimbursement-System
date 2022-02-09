@@ -1,12 +1,19 @@
 package com.reimbursement;
 
 
+import com.reimbursement.util.LoggingSingleton;
+
 public class ERSDriver {
 
     public static void main(String[] args){
 
         JavalinApp app = new JavalinApp();
         app.start(7000);
+//instantiate our logging class
+        LoggingSingleton logger = LoggingSingleton.getLogger();
+
+        logger.setWriteToFile(true);
+        logger.setWriteToConsole(false);
 
 
 //        UserDao ud = new UserDaoImpl();

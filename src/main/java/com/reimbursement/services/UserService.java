@@ -2,6 +2,7 @@ package com.reimbursement.services;
 
 import com.reimbursement.Daos.UserDao;
 import com.reimbursement.Daos.UserDaoImpl;
+import com.reimbursement.model.Reimbursement;
 import com.reimbursement.model.User;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class UserService {
 
     public boolean updatePassword(String username, String oldPass, String newPass){
         User updateUser = ud.getUserByUsername(username);
-        if (oldPass == updateUser.getPassword()){
+        if (oldPass.equals(updateUser.getPassword())){
             updateUser.setPassword(newPass);
             return ud.updateUser(updateUser);
         }
@@ -34,6 +35,7 @@ public class UserService {
         user.setUsername(username);
         return ud.updateUser(user);
     }
+
 
 
 }

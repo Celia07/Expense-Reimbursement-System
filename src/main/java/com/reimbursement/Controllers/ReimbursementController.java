@@ -7,6 +7,7 @@ import com.reimbursement.model.ReimbursementStatus;
 import com.reimbursement.model.User;
 import com.reimbursement.services.ReimbursementService;
 import com.reimbursement.services.UserService;
+import com.reimbursement.util.LoggingSingleton;
 import io.javalin.http.Context;
 import io.javalin.http.ForbiddenResponse;
 
@@ -17,6 +18,7 @@ public class ReimbursementController {
     private final ReimbursementService rs = new ReimbursementService();
     private final UserService us = new UserService();
     private ObjectMapper mapper = new ObjectMapper();
+    private LoggingSingleton logger = LoggingSingleton.getLogger();
 
     public void getAllPendingRequests(Context ctx) {
         if (!ctx.req.getSession().getAttribute("userRole").equals(1)) {
@@ -103,6 +105,11 @@ public class ReimbursementController {
 
                 rs.updateReimbursement(id, rst, userParam);
 
+                User user = us.getUserByUsername(userParam);
+
+                logger.info(user.getUserRole()+ " " + user.getFirstName() + " " + user.getLastName() +
+                        " has " + rst + " reimbursement " + id);
+
 
             } catch (Exception e) {
                 ctx.status(400);
@@ -111,9 +118,44 @@ public class ReimbursementController {
 
         }
 
+
+    }
+
+    public void submitReimbursementRequest(Context ctx) {
+        String userParam = String.valueOf(ctx.req.getSession().getAttribute("loggedIn"));
+       createReimbursementObject cro = null;
+        try {
+//            ctx.result("This method is running");
+           cro = mapper.readValue(ctx.body(),createReimbursementObject.class);
+
+            float amount = Float.parseFloat(cro.amount);
+            int reimbType= Integer.parseInt(cro.reimbType);
+//ligne 123 & 124 will convert the string to the data variable of each entity in our class Reimb
+
+            rs.createReimbursement(amount, cro.description, userParam,reimbType);
+
+            User user = us.getUserByUsername(userParam);
+
+            logger.info(user.getUserRole()+ " " + user.getFirstName() + " " + user.getLastName() +
+                    " has requested a reimbursement of " + amount );
+
+
+
+        } catch (Exception e) {
+            ctx.status(400);
+            e.printStackTrace();
+        }
+
     }
 }
+
 class updateReimbursementObject{
     public String ReimbursementId;
     public String ReimbursementStatus;
+}
+
+class createReimbursementObject{
+    public String amount;
+    public String description;
+    public String reimbType;
 }
