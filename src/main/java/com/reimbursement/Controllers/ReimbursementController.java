@@ -111,9 +111,38 @@ public class ReimbursementController {
 
         }
 
+
+    }
+
+    public void submitReimbursementRequest(Context ctx) {
+        String userParam = String.valueOf(ctx.req.getSession().getAttribute("loggedIn"));
+       createReimbursementObject cro = null;
+        try {
+            ctx.result("This method is running");
+           cro = mapper.readValue(ctx.body(),createReimbursementObject.class);
+
+            float amount = Float.parseFloat(cro.amount);
+            int reimbType= Integer.parseInt(cro.reimbType);
+//ligne 123 & 124 will convert the string to the data variable of each entity in our class Reimb
+
+            rs.createReimbursement(amount, cro.description, userParam,reimbType);
+
+
+        } catch (Exception e) {
+            ctx.status(400);
+            e.printStackTrace();
+        }
+
     }
 }
+
 class updateReimbursementObject{
     public String ReimbursementId;
     public String ReimbursementStatus;
+}
+
+class createReimbursementObject{
+    public String amount;
+    public String description;
+    public String reimbType;
 }

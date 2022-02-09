@@ -15,6 +15,7 @@ public class JavalinApp {
     private static UserController uc = new UserController();
     private static ReimbursementController rc = new ReimbursementController();
 
+//javalin->controller
 
     private Javalin app = Javalin.create().routes(()->{
 
@@ -36,14 +37,31 @@ public class JavalinApp {
 
 
 
+
         before("user", ac::verifyLogin);
         path("user", ()->{
+            before("submit", ac::verifyLogin);
+            path("submit",()->{
+                post(rc::submitReimbursementRequest);
+            });
             path("user-pending", ()->{
                 get(rc::getAllPendingRequestsByUser);
             });
             path("user-resolved", ()->{
                 get(rc::getAllResolvedRequestsByUser);
             });
+            before("information", ac::verifyLogin);
+            path("information", ()->{
+                get(uc::viewAccountInformationByUser);
+                put(uc::updateAccountInformation);
+                before("password", ac::verifyLogin);
+                path("password", ()->{
+                    put(uc::updateAccountInformationPassword);
+
+                });
+
+            });
+
         });
 
 
