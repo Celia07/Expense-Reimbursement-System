@@ -6,6 +6,7 @@ import com.reimbursement.model.User;
 import com.reimbursement.model.UserRoles;
 import com.reimbursement.services.AuthService;
 import com.reimbursement.services.UserService;
+import com.reimbursement.util.LoggingSingleton;
 import io.javalin.http.Context;
 import io.javalin.http.ForbiddenResponse;
 
@@ -16,6 +17,7 @@ public class AuthController {
     private AuthService as = new AuthService();
     private UserRoles ur;
     private ObjectMapper mapper = new ObjectMapper();
+    private LoggingSingleton logger = LoggingSingleton.getLogger();
 
     public void authenticateLogin(Context ctx) {
 
@@ -44,6 +46,9 @@ public class AuthController {
 
 
                 ctx.result(mapper.writeValueAsString(user));
+
+                logger.info(user.getUserRole()+ " " + user.getFirstName() + " " + user.getLastName() +
+                        " has signed in");
             }
 
         } catch (JsonProcessingException e) {

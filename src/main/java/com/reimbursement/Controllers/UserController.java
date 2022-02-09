@@ -6,6 +6,7 @@ import com.reimbursement.model.Reimbursement;
 import com.reimbursement.model.ReimbursementStatus;
 import com.reimbursement.model.User;
 import com.reimbursement.services.UserService;
+import com.reimbursement.util.LoggingSingleton;
 import io.javalin.http.Context;
 import io.javalin.http.ForbiddenResponse;
 
@@ -16,6 +17,7 @@ public class UserController {
     private final UserService userService = new UserService();
     private final UserService us = new UserService();
     private ObjectMapper mapper = new ObjectMapper();
+    private final LoggingSingleton logger = LoggingSingleton.getLogger();
 
     public void getAllEmployees(Context ctx) {
         if (!ctx.req.getSession().getAttribute("userRole").equals(1)) {
@@ -44,6 +46,9 @@ public class UserController {
 
                 us.updateOtherInformation(employee,uio.FirstName, uio.LastName, uio.Username,uio.email);
 
+                logger.info(employee.getUserRole()+ " " + employee.getFirstName() + " " + employee.getLastName() +
+                        " has updated their personal information");
+
             } catch (Exception e) {
                 ctx.status(400);
                 e.printStackTrace();
@@ -57,6 +62,11 @@ public class UserController {
             uip = mapper.readValue(ctx.body(), updateInformationPasswordObject.class);
 
             us.updatePassword(userParam,uip.oldPass,uip.newPass);
+
+            User employee = us.getUserByUsername(userParam);
+
+            logger.info(employee.getUserRole()+ " " + employee.getFirstName() + " " + employee.getLastName() +
+                    " has updated their password");
 
         } catch (Exception e) {
             ctx.status(400);
