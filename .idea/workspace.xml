@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc0bdc4-c580-46de-a6d0-de8452c9075a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/Controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/Controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/Controllers/ReimbursementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/Controllers/ReimbursementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/Controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/services/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/services/ReimbursementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/services/ReimbursementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/reimbursement/ReimbursementServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/reimbursement/ReimbursementServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +58,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Project 0/project0" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Gradle.Tests in 'reimbursement'">
@@ -220,6 +212,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Expense_Reimbursement_System$ReimbursementServiceTest.ic" NAME="ReimbursementServiceTest Coverage Results" MODIFIED="1644529437073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Expense_Reimbursement_System$Tests_in__reimbursement_.ic" NAME="Tests in 'reimbursement' Coverage Results" MODIFIED="1644530098285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Expense_Reimbursement_System$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1644529479124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Expense_Reimbursement_System$ReimbursementServiceTest__1_.ic" NAME="ReimbursementServiceTest (1) Coverage Results" MODIFIED="1644514208807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
