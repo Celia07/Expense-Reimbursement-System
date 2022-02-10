@@ -2,6 +2,8 @@ package com.reimbursement.Controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.reimbursement.Daos.UserDao;
+import com.reimbursement.Daos.UserDaoImpl;
 import com.reimbursement.model.User;
 import com.reimbursement.model.UserRoles;
 import com.reimbursement.services.AuthService;
@@ -13,8 +15,10 @@ import io.javalin.http.ForbiddenResponse;
 
 public class AuthController {
 
-    private UserService us = new UserService();
-    private AuthService as = new AuthService();
+    private UserDao ud = new UserDaoImpl();
+
+    private UserService us = new UserService(ud);
+    private AuthService as = new AuthService(ud);
     private UserRoles ur;
     private ObjectMapper mapper = new ObjectMapper();
     private LoggingSingleton logger = LoggingSingleton.getLogger();
