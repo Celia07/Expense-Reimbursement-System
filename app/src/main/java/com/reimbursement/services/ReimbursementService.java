@@ -15,8 +15,13 @@ import java.util.Random;
 
 public class ReimbursementService {
 
-    private final ReimbursementDao rd =new ReimbursementDaoImpl();
-    private final UserDao ud = new UserDaoImpl();
+    private final ReimbursementDao rd;
+    private final UserDao ud;
+
+    public ReimbursementService(ReimbursementDao rd, UserDao ud) {
+        this.rd = rd;
+        this.ud = ud;
+    }
 
     public boolean createReimbursement(float amount, String description, String username, int reimbType){
         User employee = ud.getUserByUsername(username);
@@ -31,9 +36,9 @@ public class ReimbursementService {
         return rd.createReimbursement(reimbursement);
     }
 
-    public List<Reimbursement> getAllReimbursements(){return rd.getAllReimbursements();}
+//    public List<Reimbursement> getAllReimbursements(){return rd.getAllReimbursements();}
 
-    public Reimbursement getReimbursementById(int id){return rd.getReimbursementById(id);}
+//    public Reimbursement getReimbursementById(int id){return rd.getReimbursementById(id);}
 
     public List<Reimbursement> getAllPendingReimbursements(){return rd.getAllReimbursementsByStatus(0);}
 
@@ -54,21 +59,30 @@ public class ReimbursementService {
     }
 
     public boolean updateReimbursement(int id, ReimbursementStatus rs, String username){
-        Reimbursement reimb = rd.getReimbursementById(id);
+        try {
+            Reimbursement reimb = rd.getReimbursementById(id);
+            User user = ud.getUserByUsername(username);
 
-        long millis=System.currentTimeMillis();
-        java.sql.Date date=new java.sql.Date(millis);
-        reimb.setReimbResolved(date);
+            long millis = System.currentTimeMillis();
+            java.sql.Date date = new java.sql.Date(millis);
+            reimb.setReimbResolved(date);
 
-        Random rand = new Random();
-        int randReceiptNumber = rand.nextInt(89999999)+10000000;
-        reimb.setReimbReciept(randReceiptNumber);
+            Random rand = new Random();
+            int randReceiptNumber = rand.nextInt(89999999) + 10000000;
+            reimb.setReimbReciept(randReceiptNumber);
 
-        reimb.setReimbResolver(ud.getUserByUsername(username));
+            reimb.setReimbResolver(user);
 
-        reimb.setReimbStatus(rs);
+            reimb.setReimbStatus(rs);
 
-        return rd.updateReimbursement(reimb);
+            return rd.updateReimbursement(reimb);
+
+        } catch (NullPointerException e){
+            return false;
+        }
+
+
+
     }
 
 }

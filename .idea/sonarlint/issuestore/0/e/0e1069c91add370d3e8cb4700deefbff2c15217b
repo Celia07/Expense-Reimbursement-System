@@ -1,0 +1,12 @@
+
+|
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Â™°8¯‘˜…î/
+X
+java:S2696%"6Make the enclosing method "static" or remove this set.(¦Ğî øÿÿÿÿ8¿‘˜…î/
+Z	java:S1065"9Replace this use of System.out or System.err by a logger.(åö¡½úÿÿÿÿ8É‘˜…î/
+X
+java:S2696;"6Make the enclosing method "static" or remove this set.(¦Ğî øÿÿÿÿ8Í‘˜…î/
+Z	java:S106K"9Replace this use of System.out or System.err by a logger.(åö¡½úÿÿÿÿ8Ô‘˜…î/
+X
+java:S2696Q"6Make the enclosing method "static" or remove this set.(¦Ğî øÿÿÿÿ8×‘˜…î/
+Z	java:S106a"9Replace this use of System.out or System.err by a logger.(åö¡½úÿÿÿÿ8Ş‘˜…î/

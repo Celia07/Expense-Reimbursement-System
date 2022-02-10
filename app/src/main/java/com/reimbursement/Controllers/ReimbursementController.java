@@ -2,6 +2,10 @@ package com.reimbursement.Controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.reimbursement.Daos.ReimbursementDao;
+import com.reimbursement.Daos.ReimbursementDaoImpl;
+import com.reimbursement.Daos.UserDao;
+import com.reimbursement.Daos.UserDaoImpl;
 import com.reimbursement.model.Reimbursement;
 import com.reimbursement.model.ReimbursementStatus;
 import com.reimbursement.model.User;
@@ -15,8 +19,11 @@ import java.util.List;
 
 public class ReimbursementController {
 
-    private final ReimbursementService rs = new ReimbursementService();
-    private final UserService us = new UserService();
+    private ReimbursementDao rd = new ReimbursementDaoImpl();
+    private UserDao ud = new UserDaoImpl();
+
+    private final ReimbursementService rs = new ReimbursementService(rd, ud);
+    private final UserService us = new UserService(ud);
     private ObjectMapper mapper = new ObjectMapper();
     private LoggingSingleton logger = LoggingSingleton.getLogger();
 

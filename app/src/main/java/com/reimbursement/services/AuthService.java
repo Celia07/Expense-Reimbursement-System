@@ -7,7 +7,11 @@ import com.reimbursement.model.User;
 
 public class AuthService {
 
-    private final UserDao ud = new UserDaoImpl();
+    private final UserDao ud;
+
+    public AuthService(UserDao ud) {
+        this.ud = ud;
+    }
 
     public boolean loginUser(String username, String password){
 

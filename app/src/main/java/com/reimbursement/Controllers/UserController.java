@@ -1,6 +1,7 @@
 package com.reimbursement.Controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.reimbursement.Daos.UserDao;
 import com.reimbursement.Daos.UserDaoImpl;
 import com.reimbursement.model.Reimbursement;
 import com.reimbursement.model.ReimbursementStatus;
@@ -14,8 +15,10 @@ import java.util.List;
 
 public class UserController {
 
-    private final UserService userService = new UserService();
-    private final UserService us = new UserService();
+    private UserDao ud = new UserDaoImpl();
+
+
+    private final UserService us = new UserService(ud);
     private ObjectMapper mapper = new ObjectMapper();
     private final LoggingSingleton logger = LoggingSingleton.getLogger();
 
@@ -23,7 +26,7 @@ public class UserController {
         if (!ctx.req.getSession().getAttribute("userRole").equals(1)) {
             throw new ForbiddenResponse("Must be a Manager to view this page");
         } else {
-            List<User> employees = userService.getAllEmployees();
+            List<User> employees = us.getAllEmployees();
             ctx.json(employees);
         }
     }
