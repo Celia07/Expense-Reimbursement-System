@@ -44,7 +44,7 @@ public class AuthController {
                 ctx.req.getSession().setAttribute("loggedIn", user.getUsername());
                 ctx.req.getSession().setAttribute("userRole", user.getUserRole().ordinal());
 
-                ctx.header("pid", "" + user.getUserId());
+                ctx.header("id", "" + user.getUserId());
                 ctx.header("loggedIn", user.getUsername());
                 ctx.header("userRole", String.valueOf(user.getUserRole().ordinal()));
 

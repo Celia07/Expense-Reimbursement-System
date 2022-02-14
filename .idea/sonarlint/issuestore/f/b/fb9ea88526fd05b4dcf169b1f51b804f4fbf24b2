@@ -1,0 +1,12 @@
+
+^
+java:S1128"BRemove this unused import 'com.reimbursement.model.Reimbursement'.(ûÒŠj8ˆ²Å¨î/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯ü‹Ú
+q
+java:S20951"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8 ¿•…î/
+r
+java:S2095Š"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8¡¿•…î/
+q
+java:S2095l"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8Ÿ¿•…î/
+q
+java:S2095N"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8 ¿•…î/
