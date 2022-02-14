@@ -17,7 +17,9 @@ public class JavalinApp {
 
 //javalin->controller
 
-    private Javalin app = Javalin.create().routes(()->{
+    private Javalin app = Javalin.create(config->{
+        config.enableCorsForAllOrigins();
+    }).routes(()->{
 
 
         before("logout", ac::verifyLogin);
