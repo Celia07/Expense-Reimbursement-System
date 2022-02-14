@@ -4,6 +4,7 @@ import com.reimbursement.Controllers.AuthController;
 import com.reimbursement.Controllers.ReimbursementController;
 import com.reimbursement.Controllers.UserController;
 import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
 
 
 import static io.javalin.apibuilder.ApiBuilder.*;
@@ -19,6 +20,7 @@ public class JavalinApp {
 
     private Javalin app = Javalin.create(config->{
         config.enableCorsForAllOrigins();
+        config.addStaticFiles("/static", Location.CLASSPATH);
     }).routes(()->{
 
 
