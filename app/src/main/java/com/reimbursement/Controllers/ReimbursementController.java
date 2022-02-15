@@ -27,6 +27,18 @@ public class ReimbursementController {
     private ObjectMapper mapper = new ObjectMapper();
     private LoggingSingleton logger = LoggingSingleton.getLogger();
 
+    public void getRequestById(Context ctx) {
+        if (!ctx.req.getSession().getAttribute("userRole").equals(1)) {
+            throw new ForbiddenResponse("Must be a Manager to view this page");
+        } else {
+            String idParam = ctx.cookie("reimbId");
+            int id = Integer.parseInt(idParam);
+
+            Reimbursement pending = rs.getReimbursementById(id);
+            ctx.json(pending);
+        }
+    }
+
     public void getAllPendingRequests(Context ctx) {
         if (!ctx.req.getSession().getAttribute("userRole").equals(1)) {
             throw new ForbiddenResponse("Must be a Manager to view this page");

@@ -97,6 +97,10 @@ public class JavalinApp {
             });
         });
 
+        path("reimbursement-by-id", ()->{
+            get(rc::getRequestById);
+        });
+
     });
 
     public void start(int port){

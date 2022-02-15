@@ -1,31 +1,36 @@
 const URL = 'http://localhost:7000';
+const USERNAME = getCookie('username');
 
-function SetCookie(c_name,value)
-	{
-		document.cookie=c_name+ "=" + value;
-	}
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
 
 let pendingTable = document.getElementById("pending")
 
 function populatePendingTable(data){
     for(itm of data){
         var row = pendingTable.insertRow(-1);
-
-        var idParam = `${itm.reimbId}`
         // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
         var cell5 = row.insertCell(4);
-        var cell6 = row.insertCell(5);
 
         // Add some text to the new cells:
-
-        cell1.innerHTML = "<a href='http://localhost:7000/updateReimbursement.html' onClick = 'SetCookie(`reimbId`, `" + idParam + "`)'>" + 
-        idParam + "</a>"
-
-        cell2.innerHTML = `${itm.amount}`;
+        cell1.innerHTML = `${itm.amount}`;
         
 
         const milliseconds = itm.reimbSubmitted;
@@ -35,16 +40,16 @@ function populatePendingTable(data){
         const humanDateFormat = dateObject.toLocaleString("en-us", {month: "numeric",
         day: "numeric", year: "numeric"});
 
-        cell3.innerHTML = humanDateFormat;
+        cell2.innerHTML = humanDateFormat;
 
         if (itm.reimbDescription == null){
-            cell4.innerHTML = 'No Description Given';
+            cell3.innerHTML = 'No Description Given';
         } else {
-            cell4.innerHTML = `${itm.reimbDescription}`;
+            cell3.innerHTML = `${itm.reimbDescription}`;
         }
         
-        cell5.innerHTML = `${itm.reimbAuthor.firstName}` + ' ' + `${itm.reimbAuthor.lastName}`;
-        cell6.innerHTML = `${itm.reimbType}`;
+        cell4.innerHTML = `${itm.reimbAuthor.firstName}` + ' ' + `${itm.reimbAuthor.lastName}`;
+        cell5.innerHTML = `${itm.reimbType}`;
     }
 
 }
@@ -110,47 +115,16 @@ function populateResolvedTable(data){
 
 }
 
+
+
+
 (()=>{
-    let apiUrl = `${URL}/user/information`;
-    fetch(apiUrl)
-        .then((res) => res.json())
-        .then((data) => {
-            if(data.userRole == "EMPLOYEE"){
-                document.getElementById('submitOption').removeAttribute("hidden");
-                document.getElementById('viewInfo').removeAttribute("hidden");
-                let apiUrl2 = `${URL}/user/user-pending`;
-                fetch(apiUrl2)
-                .then((res) => res.json())
-                .then((data) => populatePendingTable(data));
-                let apiUrl3 = `${URL}/user/user-resolved`;
-                fetch(apiUrl3)
-                .then((res) => res.json())
-                .then((data) => populateResolvedTable(data));
-            } else if (data.userRole == "MANAGER"){
-                document.getElementById('peopleOption').removeAttribute("hidden");
-                let apiUrl2 = `${URL}/requests/requests-pending`;
-                fetch(apiUrl2)
-                .then((res) => res.json())
-                .then((data) => populatePendingTable(data));
-                let apiUrl3 = `${URL}/requests/requests-resolved`;
-                fetch(apiUrl3)
-                .then((res) => res.json())
-                .then((data) => populateResolvedTable(data));
-            }
-        });
+    let apiUrl2 = `${URL}/${USERNAME}/pending`;
+    fetch(apiUrl2)
+    .then((res) => res.json())
+    .then((data) => populatePendingTable(data));
+    let apiUrl3 = `${URL}/${USERNAME}/resolved`;
+    fetch(apiUrl3)
+    .then((res) => res.json())
+    .then((data) => populateResolvedTable(data));
 })();
-
-
-// (()=>{
-//     let apiUrl = `${URL}/user/user-pending`;
-//     fetch(apiUrl)
-//         .then((res) => res.json())
-//         .then((data) => populatePendingTable(data));
-// })();
-
-// (()=>{
-//     let apiUrl = `${URL}/user/user-resolved`;
-//     fetch(apiUrl)
-//         .then((res) => res.json())
-//         .then((data) => populateResolvedTable(data));
-// })();
