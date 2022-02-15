@@ -11,10 +11,6 @@ i
 9app/src/main/java/com/reimbursement/util/LoggingUtil.java,7\5\75898bee7a24ad01a938527d038eb0060fc47d94
 e
 5app/src/main/java/com/reimbursement/Daos/UserDao.java,2\e\2eddf5cf700069c157fea2aca2db3715dcbcbd4e
-l
-<app/src/main/java/com/reimbursement/model/Reimbursement.java,c\6\c601d023d34cb47dd60e3c154386738fe07dfd98
-c
-3app/src/main/java/com/reimbursement/model/User.java,a\4\a470df3001f6188f12128147702da4b444237d9e
 n
 >app/src/main/java/com/reimbursement/Daos/ReimbursementDao.java,1\5\15debce90b9a9f691747e687991f47d6d59a8184
 r
