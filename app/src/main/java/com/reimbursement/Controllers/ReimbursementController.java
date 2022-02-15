@@ -137,9 +137,17 @@ public class ReimbursementController {
 
             float amount = Float.parseFloat(cro.amount);
             int reimbType= Integer.parseInt(cro.reimbType);
+
+            String description;
+
+            if (cro.description == ""){
+                description = null;
+            } else{
+                description = cro.description;
+            }
 //ligne 123 & 124 will convert the string to the data variable of each entity in our class Reimb
 
-            rs.createReimbursement(amount, cro.description, userParam,reimbType);
+            rs.createReimbursement(amount, description, userParam,reimbType);
 
             User user = us.getUserByUsername(userParam);
 
