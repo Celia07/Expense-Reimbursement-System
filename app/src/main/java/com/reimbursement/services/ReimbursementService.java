@@ -38,7 +38,7 @@ public class ReimbursementService {
 
 //    public List<Reimbursement> getAllReimbursements(){return rd.getAllReimbursements();}
 
-//    public Reimbursement getReimbursementById(int id){return rd.getReimbursementById(id);}
+    public Reimbursement getReimbursementById(int id){return rd.getReimbursementById(id);}
 
     public List<Reimbursement> getAllPendingReimbursements(){return rd.getAllReimbursementsByStatus(0);}
 
