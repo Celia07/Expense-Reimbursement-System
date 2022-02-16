@@ -37,7 +37,7 @@ function populatePendingTable(data){
         cell1.innerHTML = "<a href='http://localhost:7000/updateReimbursement.html' onClick = 'SetCookie(`reimbId`, `" + idParam + "`)'>" + 
         idParam + "</a>"
 
-        cell2.innerHTML = `${itm.amount}`;
+        cell2.innerHTML = "$"+`${itm.amount}`;
         
 
         const milliseconds = itm.reimbSubmitted;
@@ -79,7 +79,7 @@ function populateResolvedTable(data){
         var cell8 = row.insertCell(7);
 
         // Add some text to the new cells:
-        cell1.innerHTML = `${itm.amount}`;
+        cell1.innerHTML = "$"+`${itm.amount}`;
         
 
         const milliseconds = itm.reimbSubmitted;

@@ -259,3 +259,12 @@ INFO - 2022-02-16T11:23:54.371 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-16T11:29:28.372 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-16T11:33:04.249 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-16T11:33:45.566 - MANAGER testjs Beverly has 1 reimbursement 32
+INFO - 2022-02-16T11:47:21.248 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:01:46.163 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:06:08.452 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:08:10.430 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:10:13.986 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:14:57.098 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:22:14.615 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:24:23.078 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:26:02.618 - MANAGER testjs Beverly has signed in
