@@ -1,18 +1,71 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Submit Page Test</title>
-</head>
-<body>
-    <h1 id = 'welcomeMessage'>Submit a Reimbursement Request Below</h1>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <form>
+    <!-- Bootstrap CSS -->
+    <link  rel="stylesheet" href="css/bootstrap.min.css">
+    <link  rel="stylesheet" href="css/style.css">
+
+    <title> Submission Page </title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ERS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://localhost:7000/homePage.html">Home</a>
+          </li>
+  </nav>
+  <!-------------------------------------------------------------------------------------------------->
+  <div>
+  <h2 >SUBMISSION PAGE</h2><br>
+  </div>
+  <div>
+  <p class="blocktext">Fill this form to create a reimbursement request</p><br>
+  </div>
+  <body>
+    <form class="container"
+    method = "post"
+    onsubmit= "return false"
+    >
+      <!-- <div class="col-md-6">
+        <label for="amount" class="form-label">Amount</label>
+        <input type="text" pattern="^\d+(?:\.\d{0,2})$" class="form-control" id="amount">
+      </div>
+     
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Description</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Description" id = 'description'>
+      </div>
+      
+      <div>
+        <select id = 'reimbType' class="form-select" aria-label="Default select example">
+          <option selected>Select Reimbursement Type</option>
+          <option value="0">Food</option>
+          <option value="1">Lodging</option>
+          <option value="2">Travel</option>
+          <option value="3">Other</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <button id = 'submit' class="btn btn-primary">Submit</button>
+      </div> -->
+      <div>
         <label for="amount">Amount: </label>
         <input type="number" placeholder="1.00" step="0.01" min="0" max="10000" id = "amount" required />
+      </div>
+      <div>
         <label for="description">Description: </label>
         <input type="text" name = "description" id="description"/>
-        
+      </div>
+      <div>
         <label for="reimbType">Reimbursement Type:</label>
 
         <select name="reimbType" id="reimbType">
@@ -21,11 +74,16 @@
         <option value="2">Travel</option>
         <option value="3">Other</option>
         </select>
+      </div>
 
+      <div>
+        <button id="submitRequest">Submit</button>
+      </div>
     </form>
-
-    <button id="submit">Submit</button>
-    
-    <script src="./submitRequest.js"></script>
-</body>
-</html>
+  </body>
+  <footer>
+    <h6 class="footer-text"> Copyright Project 01(Bryan & Celia) </h6>
+  </footer>
+  <script src="./js/submitRequest.js" ></script>
+ <script src="./js/bootstrap.bundle.min.js" ></script>
+  </html>

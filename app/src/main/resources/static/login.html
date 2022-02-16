@@ -1,25 +1,71 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Test</title>
-</head>
-<body>
-    <h1>Login Page</h1>
-    <h3 id="message">Please Sign in</h3>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link  rel="stylesheet" href="./css/bootstrap.min.css">
+    <link  rel="stylesheet" href="./css/style.css">
 
-    <form>
-        <label for="username">Username: </label>
-        <input type="text" name="username" id="username"required />
-        <label for="password">Password: </label>
-        <input type="password" name="password" id="password" required />
-    </form>
+    <title> Login Page </title>
+  <!-- </head>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ERS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+  </nav> -->
+  <!-------------------------------------------------------------------------------------------------->
+  <div>
+  <h1 >REIMBURSEMENT SYSTEM</h1><br>
+  </div>
+  <div>
+  <p class="blocktext">Welcome to our reimbursement System.To begin please log in!</p><br>
+  </div>
 
-    <p id = 'badLogin' style="color:red;display:none;">Incorrect Credentials!</p>
+  <body>
 
-    <button id="login">Login</button>
+    <!--block of code for input -->
+    <form
+    method = "post"
+    onsubmit= "return false"
+    >
+      
+      <div class="container">
+        <!-- <label for="uname"><b>Username</b></label>
+        <input id="username" type="text" placeholder="Enter Username" name="uname" required>
     
-    <script src="./login.js"></script>
-</body>
+        <label for="psw"><b>Password</b></label>
+        <input id="password" type="password" placeholder="Enter Password" name="psw" required> -->
+    
+        <!-- <button type="submit" onclick="login()"> Login</button> -->
+
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username"required placeholder="Username"/>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" required placeholder="Password" />
+
+        <p id = 'badLogin' style="color:red;" hidden>Incorrect Credentials!</p>
+
+        <button id="login">Login</button>
+      </div>
+    </form>
+    <div>
+    
+    </body>
+  <footer>
+    <h6 class="footer-text"> Copyright Project 01(Bryan & Celia) </h6>
+  </footer>
+
+    
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/login.js"></script>
 </html>

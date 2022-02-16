@@ -1,6 +1,14 @@
 const URL = 'http://localhost:7000';
 const USERNAME = getCookie('reimbId');
 
+
+function handleErrors(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+    return response;
+}
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -17,6 +25,7 @@ function getCookie(cname) {
     return "";
 }
 
+let reimbId;
 
 (()=>{
     let apiUrl = `${URL}/reimbursement-by-id`;
@@ -24,6 +33,7 @@ function getCookie(cname) {
         .then((res) => res.json())
         .then((data) => {
             document.getElementById('cell1').innerHTML = "Reimbursement Id: " + `${data.reimbId}`
+            reimbId = `${data.reimbId}`;
             document.getElementById('cell2').innerHTML = "Amount: $" + `${data.amount}`
             if (data.reimbDescription == null){
                 document.getElementById('cell3').innerHTML = 'Description: No Description Given';
@@ -34,3 +44,32 @@ function getCookie(cname) {
             document.getElementById('cell5').innerHTML = "Employee: " + `${data.reimbAuthor.firstName}` + " " + `${data.reimbAuthor.lastName}`
         });
 })();
+
+let put = async () => {
+    let reimbStatus = document.getElementById('reimbStatus').value;
+    
+
+    let updateReimbObj = {
+        reimbId,
+        reimbStatus
+    };
+
+
+    await fetch(`${URL}/requests/requests-pending`, {
+        method: 'PUT',
+        body: JSON.stringify(updateReimbObj)
+    })
+    .then(handleErrors)
+    .then((res)=> {
+        if (res.status == 200) {
+            window.location.href = "http://localhost:7000/homePage.html"
+          }else {
+            throw Error(response.statusText);
+          }
+    })
+    .catch(error => console.log(error) );
+    
+    
+}
+
+let updateRequest = document.getElementById('updateRequest').addEventListener('click', put);

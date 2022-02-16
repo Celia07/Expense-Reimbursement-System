@@ -38,7 +38,7 @@ let post = async () => {
     
 }
 
-let submitRequest = document.getElementById('submit').addEventListener('click', post);
+let submitRequest = document.getElementById('submitRequest').addEventListener('click', post);
 
 
 
