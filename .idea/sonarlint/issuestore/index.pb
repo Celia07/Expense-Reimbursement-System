@@ -3,18 +3,12 @@ r
 Bapp/src/main/java/com/reimbursement/model/ReimbursementStatus.java,a\c\ac97a8e8814737bf30b82a48eb68bf437a906072
 h
 8app/src/main/java/com/reimbursement/model/UserRoles.java,2\9\29c8d4d740f19071eb29bb959cdca295d25ebd9b
-l
-<app/src/main/java/com/reimbursement/util/ConnectionUtil.java,e\a\ea18210957e32f96c89baa020f4c8e4636d11df8
 n
 >app/src/main/java/com/reimbursement/util/LoggingSingleton.java,0\e\0e1069c91add370d3e8cb4700deefbff2c15217b
 i
 9app/src/main/java/com/reimbursement/util/LoggingUtil.java,7\5\75898bee7a24ad01a938527d038eb0060fc47d94
 e
 5app/src/main/java/com/reimbursement/Daos/UserDao.java,2\e\2eddf5cf700069c157fea2aca2db3715dcbcbd4e
-n
->app/src/main/java/com/reimbursement/Daos/ReimbursementDao.java,1\5\15debce90b9a9f691747e687991f47d6d59a8184
-r
-Bapp/src/main/java/com/reimbursement/Daos/ReimbursementDaoImpl.java,d\c\dc0d3026d9f0f93592f87424c27c0ba5b3122006
 i
 9app/src/main/java/com/reimbursement/Daos/UserDaoImpl.java,f\b\fb9ea88526fd05b4dcf169b1f51b804f4fbf24b2
 m
@@ -23,8 +17,6 @@ d
 4app/src/test/java/reimbursement/UserServiceTest.java,a\7\a72dc495df59e2ab05a2508aaf18939a3113e19a
 d
 4app/src/test/java/reimbursement/AuthServiceTest.java,1\9\19e80a90c30b78a73155d339d70bdaa1638fb774
-m
-=app/src/main/java/com/reimbursement/services/UserService.java,4\d\4dae5ef25a4854faeacd1df045dbf33ed0f1d6dc
 l
 <app/src/main/java/com/reimbursement/model/Reimbursement.java,c\6\c601d023d34cb47dd60e3c154386738fe07dfd98
 7

@@ -3,8 +3,10 @@ const URL = 'http://localhost:7000';
 
 function handleErrors(response) {
     if (!response.ok) {
-        document.getElementById('badLogin').removeAttribute('hidden');
-        throw Error(response.statusText);
+        if(response.status == 400){
+            document.getElementById('badLogin').removeAttribute('hidden');
+            throw Error(response.statusText);
+        }
     }
     return response;
 }
