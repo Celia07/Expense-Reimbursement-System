@@ -3,6 +3,7 @@ const URL = 'http://localhost:7000';
 console.log("test");
 function handleErrors(response) {
     if (!response.ok) {
+        document.getElementById('badLogin').removeAttribute('hidden');
         throw Error(response.statusText);
     }
     return response;
@@ -32,9 +33,6 @@ let post = async () => {
     .then(handleErrors)
     .then((res)=> {
         if (res.status == 200) {
-            return res.json();
-          } else if(res.status == 403){
-            document.getElementById('badLogin').style.display = 'block';
             return res.json();
           }else {
             throw Error(response.statusText);

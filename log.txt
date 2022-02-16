@@ -188,6 +188,7 @@ INFO - 2022-02-15T12:54:40.350 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T12:57:35.303 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T13:00:31.382 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T13:05:25.056 - EMPLOYEE Gallagher Bruinemann has signed in
+<<<<<<< HEAD
 INFO - 2022-02-15T14:50:14.497568 - MANAGER Nicolette Beverly has signed in
 INFO - 2022-02-15T14:50:26.095103200 - MANAGER Nicolette Beverly has signed in
 INFO - 2022-02-15T14:56:07.898526700 - MANAGER Nicolette Beverly has signed in
@@ -278,3 +279,85 @@ INFO - 2022-02-16T17:04:45.843304400 - EMPLOYEE admin admin has signed in
 INFO - 2022-02-16T17:05:08.291765 - EMPLOYEE admin admin has updated their password
 INFO - 2022-02-16T17:12:01.232153 - EMPLOYEE admin admin has signed in
 INFO - 2022-02-16T17:12:18.122004400 - EMPLOYEE admin admin has updated their password
+=======
+INFO - 2022-02-15T13:07:51.396 - EMPLOYEE Gallagher Bruinemann has signed in
+INFO - 2022-02-15T14:47:48.221 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T14:50:25.488 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T14:51:11.839 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:09:03.148 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:09:54.970 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:13:04.718 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:14:10.851 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:15:04.512 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:19:18.600 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:24:53.823 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:24:53.839 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:25:58.513 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:26:32.444 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:30:33.794 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:34:35.748 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:35:09.981 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:36:09.674 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:43:20.289 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:44:04.698 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:48:49.570 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:49:47.382 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:52:51.602 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T15:57:17.504 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:06:55.977 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:08:06.686 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:09:15.563 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:12:11.764 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:12:54.423 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:14:43.674 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:17:32.609 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:18:41.724 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:20:00.633 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:28:19.988 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T16:29:35.865 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:04:33.391 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:16:11.407 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:18:11.081 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:19:53.672 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:20:57.667 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:22:36.223 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:24:28.886 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:26:59.915 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:27:01.596 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:28:00.900 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:48:04.540 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:49:24.762 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:51:00.608 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:52:11.877 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:53:13.320 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-15T17:55:03.583 - MANAGER Nicolette Beverly has signed in
+INFO - 2022-02-16T10:21:30.716 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T10:29:24.826 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T10:32:47.810 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T10:38:24.432 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T10:38:49.466 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T10:39:44.794 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T10:44:57.972 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T10:45:27.728 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T10:53:22.910 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T11:02:56.730 - EMPLOYEE test Bruinemann has signed in
+INFO - 2022-02-16T11:03:40.589 - EMPLOYEE test Bruinemann has requested a reimbursement of 324.0
+INFO - 2022-02-16T11:06:43.835 - EMPLOYEE test Bruinemann has signed in
+INFO - 2022-02-16T11:07:47.291 - EMPLOYEE test Bruinemann has signed in
+INFO - 2022-02-16T11:08:25.948 - EMPLOYEE test Bruinemann has requested a reimbursement of 345.0
+INFO - 2022-02-16T11:14:42.364 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T11:22:01.608 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T11:23:54.371 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T11:29:28.372 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T11:33:04.249 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T11:33:45.566 - MANAGER testjs Beverly has 1 reimbursement 32
+INFO - 2022-02-16T11:47:21.248 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:01:46.163 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:06:08.452 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:08:10.430 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:10:13.986 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:14:57.098 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:22:14.615 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:24:23.078 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T13:26:02.618 - MANAGER testjs Beverly has signed in
+>>>>>>> 0457ea78fb405b56e7a04b89ca47bb9c8bc4cc1b
