@@ -8,6 +8,7 @@ import com.reimbursement.Daos.UserDao;
 import com.reimbursement.Daos.UserDaoImpl;
 import com.reimbursement.model.Reimbursement;
 import com.reimbursement.model.ReimbursementStatus;
+import com.reimbursement.model.ReimbursementType;
 import com.reimbursement.model.User;
 import com.reimbursement.services.ReimbursementService;
 import com.reimbursement.services.UserService;
@@ -110,19 +111,22 @@ public class ReimbursementController {
             try {
                 uro = mapper.readValue(ctx.body(), updateReimbursementObject.class);
 
-                int id = Integer.parseInt(uro.ReimbursementId);
+                int id = Integer.parseInt(uro.reimbId);
+                int rst= Integer.parseInt(uro.reimbStatus);
 
-                ReimbursementStatus rst = ReimbursementStatus.PENDING;
+//                ReimbursementStatus rst = ReimbursementStatus.PENDING;
 
-                if(uro.ReimbursementStatus.equals("APPROVED")){
-                    rst = ReimbursementStatus.APPROVED;
-                } else if (uro.ReimbursementStatus.equals("DENIED")){
-                    rst = ReimbursementStatus.DENIED;
-                } else {
-                    ctx.status(400);
-                }
+//                if(uro.ReimbursementStatus.equals("APPROVED")){
+//                    rst = ReimbursementStatus.APPROVED;
+//                } else if (uro.ReimbursementStatus.equals("DENIED")){
+//                    rst = ReimbursementStatus.DENIED;
+//                } else {
+//                    ctx.status(400);
+//                }
 
-                rs.updateReimbursement(id, rst, userParam);
+                ReimbursementStatus[] status = ReimbursementStatus.values();
+
+                rs.updateReimbursement(id, status[rst], userParam);
 
                 User user = us.getUserByUsername(userParam);
 
@@ -177,8 +181,8 @@ public class ReimbursementController {
 }
 
 class updateReimbursementObject{
-    public String ReimbursementId;
-    public String ReimbursementStatus;
+    public String reimbId;
+    public String reimbStatus;
 }
 
 class createReimbursementObject{

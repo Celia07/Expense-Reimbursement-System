@@ -33,7 +33,7 @@ public class AuthController {
             System.out.println(lo.username + " , " + lo.password);
 
             if(!as.loginUser(lo.username, lo.password)){
-                ctx.status(403);
+                ctx.status(400);
                 ctx.result("Username or password is incorrect");
             }else {
 

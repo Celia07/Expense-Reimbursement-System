@@ -22,15 +22,22 @@ let pendingTable = document.getElementById("pending")
 function populatePendingTable(data){
     for(itm of data){
         var row = pendingTable.insertRow(-1);
+
+        var idParam = `${itm.reimbId}`
         // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
         var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
 
         // Add some text to the new cells:
-        cell1.innerHTML = `${itm.amount}`;
+
+        cell1.innerHTML = "<a href='http://localhost:7000/updateReimbursement.html' onClick = 'SetCookie(`reimbId`, `" + idParam + "`)'>" + 
+        idParam + "</a>"
+
+        cell2.innerHTML = `${itm.amount}`;
         
 
         const milliseconds = itm.reimbSubmitted;
@@ -40,16 +47,16 @@ function populatePendingTable(data){
         const humanDateFormat = dateObject.toLocaleString("en-us", {month: "numeric",
         day: "numeric", year: "numeric"});
 
-        cell2.innerHTML = humanDateFormat;
+        cell3.innerHTML = humanDateFormat;
 
         if (itm.reimbDescription == null){
-            cell3.innerHTML = 'No Description Given';
+            cell4.innerHTML = 'No Description Given';
         } else {
-            cell3.innerHTML = `${itm.reimbDescription}`;
+            cell4.innerHTML = `${itm.reimbDescription}`;
         }
         
-        cell4.innerHTML = `${itm.reimbAuthor.firstName}` + ' ' + `${itm.reimbAuthor.lastName}`;
-        cell5.innerHTML = `${itm.reimbType}`;
+        cell5.innerHTML = `${itm.reimbAuthor.firstName}` + ' ' + `${itm.reimbAuthor.lastName}`;
+        cell6.innerHTML = `${itm.reimbType}`;
     }
 
 }
