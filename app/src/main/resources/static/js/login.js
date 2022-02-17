@@ -1,6 +1,6 @@
 
 const URL = 'http://localhost:7000';
-console.log("test");
+
 function handleErrors(response) {
     if (!response.ok) {
         document.getElementById('badLogin').removeAttribute('hidden');

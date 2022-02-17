@@ -188,98 +188,7 @@ INFO - 2022-02-15T12:54:40.350 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T12:57:35.303 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T13:00:31.382 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T13:05:25.056 - EMPLOYEE Gallagher Bruinemann has signed in
-<<<<<<< HEAD
-INFO - 2022-02-15T14:50:14.497568 - MANAGER Nicolette Beverly has signed in
-INFO - 2022-02-15T14:50:26.095103200 - MANAGER Nicolette Beverly has signed in
-INFO - 2022-02-15T14:56:07.898526700 - MANAGER Nicolette Beverly has signed in
-INFO - 2022-02-15T14:58:35.569535800 - EMPLOYEE Persis MacCaughen has signed in
-INFO - 2022-02-15T14:58:57.057708600 - EMPLOYEE Persis MacCaughen has requested a reimbursement of 120.0
-INFO - 2022-02-15T17:15:43.971328200 - MANAGER Nicolette Beverly has signed in
-INFO - 2022-02-15T17:20:36.552217600 - EMPLOYEE Persis MacCaughen has signed in
-INFO - 2022-02-15T17:28:41.931159300 - MANAGER Nicolette Beverly has signed in
-INFO - 2022-02-15T17:37:51.601572500 - MANAGER Nicolette Beverly has signed in
-INFO - 2022-02-15T17:38:46.523622700 - MANAGER Nicolette Beverly has signed in
-INFO - 2022-02-15T17:41:37.697630800 - MANAGER Nicolette Beverly has signed in
-INFO - 2022-02-15T17:44:35.193199300 - EMPLOYEE Tam Jankin has signed in
-INFO - 2022-02-15T17:50:37.686862100 - EMPLOYEE Rustie Muckersie has signed in
-INFO - 2022-02-15T18:18:59.991875500 - MANAGER Nicolette Beverly has signed in
-INFO - 2022-02-15T18:19:34.123826800 - MANAGER password Beverly has updated their personal information
-INFO - 2022-02-16T06:28:37.397823500 - EMPLOYEE Rustie Muckersie has signed in
-INFO - 2022-02-16T07:08:46.747579900 - MANAGER Sholom Shergill has signed in
-INFO - 2022-02-16T07:09:31.874790200 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T07:18:11.127204800 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T07:23:21.542419800 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T07:26:45.358710100 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T07:29:25.641454600 - MANAGER password Beverly has signed in
-INFO - 2022-02-16T07:29:39.642543400 - MANAGER testjs Beverly has updated their personal information
-INFO - 2022-02-16T07:35:50.358401100 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T07:46:14.206859200 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T07:49:30.250300600 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T07:53:24.976188 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T07:56:47.402063400 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T08:06:15.080621600 - EMPLOYEE Gallagher Bruinemann has signed in
-INFO - 2022-02-16T08:06:35.288990100 - EMPLOYEE test Bruinemann has updated their personal information
-INFO - 2022-02-16T08:09:20.641322 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T08:11:24.000309400 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T08:28:24.309082400 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T08:47:38.049955200 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T08:49:39.276238200 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T08:54:12.755823200 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T08:57:11.355299600 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:02:45.535883500 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:14:22.804625200 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:21:27.029495800 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:24:10.276168900 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:32:53.356785600 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:37:50.379184100 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:40:20.953310700 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:44:48.552775700 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:47:15.176178900 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:48:22.261420 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:49:52.637249200 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:51:19.340224600 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T09:51:30.087283700 - EMPLOYEE test Bruinemann has updated their password
-INFO - 2022-02-16T11:00:48.395879700 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T11:01:00.419742800 - EMPLOYEE test Bruinemann has updated their personal information
-INFO - 2022-02-16T11:01:18.858486500 - EMPLOYEE test Bruinemann has updated their password
-INFO - 2022-02-16T11:02:02.387390700 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T11:03:12.665567200 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T11:03:31.495401600 - EMPLOYEE test Bruinemann has updated their password
-INFO - 2022-02-16T11:04:33.248476500 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T11:04:58.488496800 - EMPLOYEE test Bruinemann has updated their personal information
-INFO - 2022-02-16T11:05:19.421647300 - EMPLOYEE test Bruinemann has updated their password
-INFO - 2022-02-16T11:18:29.458273900 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T11:19:59.007926 - EMPLOYEE test Bruinemann has signed in
-INFO - 2022-02-16T11:20:19.279013 - EMPLOYEE test test has updated their personal information
-INFO - 2022-02-16T11:20:50.251647600 - EMPLOYEE test test has updated their personal information
-INFO - 2022-02-16T11:27:32.551775600 - MANAGER testjs Beverly has signed in
-INFO - 2022-02-16T11:28:35.228358 - EMPLOYEE test test has signed in
-INFO - 2022-02-16T11:28:52.341980600 - EMPLOYEE test test has updated their personal information
-INFO - 2022-02-16T11:30:09.743116600 - EMPLOYEE test test has signed in
-INFO - 2022-02-16T11:30:23.788916500 - EMPLOYEE admin test has updated their personal information
-INFO - 2022-02-16T11:30:39.017567300 - EMPLOYEE admin test has updated their personal information
-INFO - 2022-02-16T11:32:17.914117500 - EMPLOYEE admin test has signed in
-INFO - 2022-02-16T11:32:30.600299700 - EMPLOYEE admin test has updated their personal information
-INFO - 2022-02-16T11:33:52.273851400 - EMPLOYEE admin test has updated their personal information
-INFO - 2022-02-16T11:42:14.220275500 - EMPLOYEE admin test has signed in
-INFO - 2022-02-16T11:42:35.806553300 - EMPLOYEE admin test has updated their personal information
-INFO - 2022-02-16T11:43:13.679939200 - EMPLOYEE admin test has updated their password
-INFO - 2022-02-16T11:45:02.667420200 - EMPLOYEE admin test has signed in
-INFO - 2022-02-16T11:45:16.953340700 - EMPLOYEE admin test has updated their password
-INFO - 2022-02-16T11:48:59.622101500 - EMPLOYEE admin test has signed in
-INFO - 2022-02-16T11:49:18.948462100 - EMPLOYEE admin test has updated their password
-INFO - 2022-02-16T16:37:12.776978200 - EMPLOYEE admin test has signed in
-INFO - 2022-02-16T16:37:36.632658400 - EMPLOYEE admin admin has updated their personal information
-INFO - 2022-02-16T16:37:55.267777100 - EMPLOYEE admin admin has updated their personal information
-INFO - 2022-02-16T16:43:49.881063600 - EMPLOYEE admin admin has signed in
-INFO - 2022-02-16T16:44:24.649177200 - EMPLOYEE admin admin has updated their personal information
-INFO - 2022-02-16T16:57:06.607100100 - EMPLOYEE admin admin has signed in
-INFO - 2022-02-16T16:57:20.843127900 - EMPLOYEE admin admin has updated their personal information
-INFO - 2022-02-16T17:04:45.843304400 - EMPLOYEE admin admin has signed in
-INFO - 2022-02-16T17:05:08.291765 - EMPLOYEE admin admin has updated their password
-INFO - 2022-02-16T17:12:01.232153 - EMPLOYEE admin admin has signed in
-INFO - 2022-02-16T17:12:18.122004400 - EMPLOYEE admin admin has updated their password
-=======
+
 INFO - 2022-02-15T13:07:51.396 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T14:47:48.221 - MANAGER Nicolette Beverly has signed in
 INFO - 2022-02-15T14:50:25.488 - MANAGER Nicolette Beverly has signed in
@@ -360,4 +269,4 @@ INFO - 2022-02-16T13:14:57.098 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-16T13:22:14.615 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-16T13:24:23.078 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-16T13:26:02.618 - MANAGER testjs Beverly has signed in
->>>>>>> 0457ea78fb405b56e7a04b89ca47bb9c8bc4cc1b
+
