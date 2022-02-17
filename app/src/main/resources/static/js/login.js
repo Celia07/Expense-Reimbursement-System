@@ -3,11 +3,17 @@ const URL = 'http://localhost:7000';
 console.log("test");
 function handleErrors(response) {
     if (!response.ok) {
-        document.getElementById('badLogin').removeAttribute('hidden');
+        if (response.status == 403){
+            window.location.href = "forbiddenError.html"
+        }else if (response.status == 500){
+            window.location.href = "internalServerError.html"
+        }
+        document.getElementById('badLogin').removeAttribute('hidden')
         throw Error(response.statusText);
-    }
+    } 
     return response;
 }
+
 
 let post = async () => {
     let username = document.getElementById('username').value;

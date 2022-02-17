@@ -1,10 +1,10 @@
 
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯ü‹Ú
+r
+java:S2095Œ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8Á¦”…î/
 q
 java:S2095M"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8À¦”…î/
-r
-java:S2095¬"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8Á¦”…î/
 q
 java:S2095m"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8Á¦”…î/
 r
-java:S2095Œ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8Á¦”…î/
+java:S2095¬"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ò²¡°øÿÿÿÿ8Á¦”…î/

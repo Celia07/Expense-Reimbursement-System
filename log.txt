@@ -188,7 +188,7 @@ INFO - 2022-02-15T12:54:40.350 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T12:57:35.303 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T13:00:31.382 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T13:05:25.056 - EMPLOYEE Gallagher Bruinemann has signed in
-<<<<<<< HEAD
+ HEAD
 INFO - 2022-02-15T14:50:14.497568 - MANAGER Nicolette Beverly has signed in
 INFO - 2022-02-15T14:50:26.095103200 - MANAGER Nicolette Beverly has signed in
 INFO - 2022-02-15T14:56:07.898526700 - MANAGER Nicolette Beverly has signed in
@@ -279,7 +279,7 @@ INFO - 2022-02-16T17:04:45.843304400 - EMPLOYEE admin admin has signed in
 INFO - 2022-02-16T17:05:08.291765 - EMPLOYEE admin admin has updated their password
 INFO - 2022-02-16T17:12:01.232153 - EMPLOYEE admin admin has signed in
 INFO - 2022-02-16T17:12:18.122004400 - EMPLOYEE admin admin has updated their password
-=======
+
 INFO - 2022-02-15T13:07:51.396 - EMPLOYEE Gallagher Bruinemann has signed in
 INFO - 2022-02-15T14:47:48.221 - MANAGER Nicolette Beverly has signed in
 INFO - 2022-02-15T14:50:25.488 - MANAGER Nicolette Beverly has signed in
@@ -360,4 +360,21 @@ INFO - 2022-02-16T13:14:57.098 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-16T13:22:14.615 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-16T13:24:23.078 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-16T13:26:02.618 - MANAGER testjs Beverly has signed in
->>>>>>> 0457ea78fb405b56e7a04b89ca47bb9c8bc4cc1b
+ master
+ 0457ea78fb405b56e7a04b89ca47bb9c8bc4cc1b
+
+INFO - 2022-02-16T13:29:37.905 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T16:31:42.825 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T16:59:56.708 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T23:27:16.080 - MANAGER testjs Beverly has signed in2022-02-16T23:27:16.082INFO - 2022-02-16T23:27:16.080 - MANAGER testjs Beverly has signed in2022-02-16T23:27:16.082 - MANAGER testjs Beverly has signed in
+
+INFO - 2022-02-16T23:32:37.157 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T23:32:37.246 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T23:34:29.616 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-16T23:38:34.6782022-02-16T23:38:34.677 -  - MANAGER testjs Beverly has signed inMANAGER testjs Beverly has signed inINFO - 2022-02-16T23:38:34.6782022-02-16T23:38:34.677 -  - MANAGER testjs Beverly has signed inMANAGER testjs Beverly has signed in
+
+INFO - 2022-02-16T23:39:38.652 - MANAGER testjs Beverly has 1 reimbursement 30
+INFO - 2022-02-17T01:42:28.683 - MANAGER testjs Beverly has signed in
+INFO - 2022-02-17T01:43:01.881 - EMPLOYEE admin admin has signed in
+INFO - 2022-02-17T01:43:03.216 - EMPLOYEE admin admin has signed in
+ bryan-branch
