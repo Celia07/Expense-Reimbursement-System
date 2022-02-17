@@ -45,6 +45,17 @@ h2{
     background-color: white;
   }
 
+.tableContainer{
+  width: 1000px;
+  height: 100%;  
+  padding: 25px; 
+  border : 6px groove;
+  border-color:orange; 
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .errorContainer{
   width: 350px;
   height: 100%;  

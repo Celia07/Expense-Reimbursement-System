@@ -35,7 +35,7 @@ function populateEmployeeTable(data){
 
         // <a href="#" onClick="SetCookie('COOKIENAME','COOKIEVALUE','1')"></a>
         cell2.innerHTML = `${itm.firstName}` + ' ' + `${itm.lastName}`
-        cell3.innerHTML = "<a href='http://localhost:7000/specificUser.html' onClick = 'SetCookie(`username`, `" + userParam + "`)'>" + 
+        cell3.innerHTML = "<a href='specificUser.html' onClick = 'SetCookie(`username`, `" + userParam + "`)'>" + 
         userParam + "</a>";
         
         cell4.innerHTML = `${itm.email}`;
@@ -51,6 +51,11 @@ function populateEmployeeTable(data){
     .then(handleErrors)
         .then((res) => res.json())
         .then((data) => {
+            document.getElementById('navbar').removeAttribute('hidden')
+            document.getElementById('welcomeMessage').removeAttribute('hidden')
+            document.getElementById('mainContainer').removeAttribute('hidden')
+            document.getElementById('footer').removeAttribute('hidden')
+            document.getElementById('viewEmployees').removeAttribute('hidden')
             populateEmployeeTable(data);
         })
         .catch(error => console.log(error) );

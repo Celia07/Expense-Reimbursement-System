@@ -17,8 +17,13 @@ updatePassButton.addEventListener('click', togglePassForm);
 
 function handleErrors(response) {
     if (!response.ok) {
+        if (response.status == 403){
+            window.location.href = "forbiddenError.html"
+        }else if (response.status == 500){
+            window.location.href = "internalServerError.html"
+        }
         throw Error(response.statusText);
-    }
+    } 
     return response;
 }
 
@@ -61,8 +66,15 @@ var emailParam;
     let apiUrl = `${URL}/user/information/`;
     console.log("i retrieved user info");
     fetch(apiUrl)
+    .then(handleErrors)
         .then((res) => res.json())
         .then((data) => {
+            document.getElementById('navbar').removeAttribute('hidden')
+            document.getElementById('welcomeMessage').removeAttribute('hidden')
+            document.getElementById('mainContainer').removeAttribute('hidden')
+            document.getElementById('footer').removeAttribute('hidden')
+            document.getElementById('submitRequest').removeAttribute('hidden')
+            document.getElementById('accountInfo').removeAttribute('hidden')
             document.getElementById('cell1').innerHTML = "Employee ID: " + `${data.userId}`
             document.getElementById('cell2').innerHTML = "First Name: " + `${data.firstName}`
             firstNameParam = `${data.firstName}`;
@@ -135,7 +147,7 @@ let changeAccountInfo = async () => {
     .then(handleErrors)
     .then((res)=> {
         if (res.status == 200) {
-            window.location.href = "http://localhost:7000/accountInfo.html"
+            window.location.href = "accountInfo.html"
           }else {
             throw Error(response.statusText);
           }
@@ -200,7 +212,7 @@ let changePassword = async () => {
         .then((res)=> {
             if (res.status == 200) {
                 console.log("i changed password");
-                window.location.href = "http://localhost:7000/accountInfo.html"
+                window.location.href = "accountInfo.html"
               }else {
                 throw Error(response.statusText);
               }
