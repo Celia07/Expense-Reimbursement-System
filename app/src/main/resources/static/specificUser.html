@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager View Employee Test</title>
+</head>
+<body>
+    <h1 id = 'welcomeMessage'></h1>
+
+    <h2>Pending Requests</h2>
+    <div>
+        <table id="pending" border = "1" height = 100%>
+            <thead>
+                <tr>
+                  <th>Reimbursement Id</th>
+                  <th>Amount</th>
+                  <th>Date Submitted</th>
+                  <th>Description</th>
+                  <th>Requester</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+    </div>
+
+    <h2>Resolved Requests</h2>
+    <div>
+        <table id="resolved" border = "1" height = 100%>
+            <thead>
+                <tr>
+                  <th>Amount</th>
+                  <th>Date Submitted</th>
+                  <th>Description</th>
+                  <th>Requester</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Resolver</th>
+                  <th>Resolved Date</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+    </div>
+
+    
+    <script src="./js/specificUser.js"></script>
+</body>
+</html>

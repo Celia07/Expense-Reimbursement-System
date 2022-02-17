@@ -2,8 +2,13 @@ package com.reimbursement.Controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.reimbursement.Daos.ReimbursementDao;
+import com.reimbursement.Daos.ReimbursementDaoImpl;
+import com.reimbursement.Daos.UserDao;
+import com.reimbursement.Daos.UserDaoImpl;
 import com.reimbursement.model.Reimbursement;
 import com.reimbursement.model.ReimbursementStatus;
+import com.reimbursement.model.ReimbursementType;
 import com.reimbursement.model.User;
 import com.reimbursement.services.ReimbursementService;
 import com.reimbursement.services.UserService;
@@ -15,10 +20,25 @@ import java.util.List;
 
 public class ReimbursementController {
 
-    private final ReimbursementService rs = new ReimbursementService();
-    private final UserService us = new UserService();
+    private ReimbursementDao rd = new ReimbursementDaoImpl();
+    private UserDao ud = new UserDaoImpl();
+
+    private final ReimbursementService rs = new ReimbursementService(rd, ud);
+    private final UserService us = new UserService(ud);
     private ObjectMapper mapper = new ObjectMapper();
     private LoggingSingleton logger = LoggingSingleton.getLogger();
+
+    public void getRequestById(Context ctx) {
+        if (!ctx.req.getSession().getAttribute("userRole").equals(1)) {
+            throw new ForbiddenResponse("Must be a Manager to view this page");
+        } else {
+            String idParam = ctx.cookie("reimbId");
+            int id = Integer.parseInt(idParam);
+
+            Reimbursement pending = rs.getReimbursementById(id);
+            ctx.json(pending);
+        }
+    }
 
     public void getAllPendingRequests(Context ctx) {
         if (!ctx.req.getSession().getAttribute("userRole").equals(1)) {
@@ -91,19 +111,22 @@ public class ReimbursementController {
             try {
                 uro = mapper.readValue(ctx.body(), updateReimbursementObject.class);
 
-                int id = Integer.parseInt(uro.ReimbursementId);
+                int id = Integer.parseInt(uro.reimbId);
+                int rst= Integer.parseInt(uro.reimbStatus);
 
-                ReimbursementStatus rst = ReimbursementStatus.PENDING;
+//                ReimbursementStatus rst = ReimbursementStatus.PENDING;
 
-                if(uro.ReimbursementStatus.equals("APPROVED")){
-                    rst = ReimbursementStatus.APPROVED;
-                } else if (uro.ReimbursementStatus.equals("DENIED")){
-                    rst = ReimbursementStatus.DENIED;
-                } else {
-                    ctx.status(400);
-                }
+//                if(uro.ReimbursementStatus.equals("APPROVED")){
+//                    rst = ReimbursementStatus.APPROVED;
+//                } else if (uro.ReimbursementStatus.equals("DENIED")){
+//                    rst = ReimbursementStatus.DENIED;
+//                } else {
+//                    ctx.status(400);
+//                }
 
-                rs.updateReimbursement(id, rst, userParam);
+                ReimbursementStatus[] status = ReimbursementStatus.values();
+
+                rs.updateReimbursement(id, status[rst], userParam);
 
                 User user = us.getUserByUsername(userParam);
 
@@ -130,9 +153,17 @@ public class ReimbursementController {
 
             float amount = Float.parseFloat(cro.amount);
             int reimbType= Integer.parseInt(cro.reimbType);
+
+            String description;
+
+            if (cro.description == ""){
+                description = null;
+            } else{
+                description = cro.description;
+            }
 //ligne 123 & 124 will convert the string to the data variable of each entity in our class Reimb
 
-            rs.createReimbursement(amount, cro.description, userParam,reimbType);
+            rs.createReimbursement(amount, description, userParam,reimbType);
 
             User user = us.getUserByUsername(userParam);
 
@@ -150,8 +181,8 @@ public class ReimbursementController {
 }
 
 class updateReimbursementObject{
-    public String ReimbursementId;
-    public String ReimbursementStatus;
+    public String reimbId;
+    public String reimbStatus;
 }
 
 class createReimbursementObject{

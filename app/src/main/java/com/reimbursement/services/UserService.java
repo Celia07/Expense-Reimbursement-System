@@ -9,7 +9,11 @@ import java.util.List;
 
 public class UserService {
 
-    private final UserDao ud = new UserDaoImpl();
+    private final UserDao ud;
+
+    public UserService(UserDao ud) {
+        this.ud = ud;
+    }
 
     public List<User> getAllUsers(){return ud.getAllUsers();}
 
@@ -20,20 +24,29 @@ public class UserService {
     public User getUserById(int id){return ud.getUserByID(id);}
 
     public boolean updatePassword(String username, String oldPass, String newPass){
-        User updateUser = ud.getUserByUsername(username);
-        if (oldPass.equals(updateUser.getPassword())){
-            updateUser.setPassword(newPass);
-            return ud.updateUser(updateUser);
+        try{
+            User updateUser = ud.getUserByUsername(username);
+            if (oldPass.equals(updateUser.getPassword())){
+                updateUser.setPassword(newPass);
+                return ud.updateUser(updateUser);
+            }
+            return false;
+        } catch (Exception e){
+            return false;
         }
-        return false;
+
     }
 
     public boolean updateOtherInformation(User user, String first, String last, String username, String email){
-        user.setFirstName(first);
-        user.setLastName(last);
-        user.setEmail(email);
-        user.setUsername(username);
-        return ud.updateUser(user);
+        try {
+            user.setFirstName(first);
+            user.setLastName(last);
+            user.setEmail(email);
+            user.setUsername(username);
+            return ud.updateUser(user);
+        } catch (Exception e){
+            return false;
+        }
     }
 
 

@@ -2,6 +2,8 @@ package com.reimbursement.Controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.reimbursement.Daos.UserDao;
+import com.reimbursement.Daos.UserDaoImpl;
 import com.reimbursement.model.User;
 import com.reimbursement.model.UserRoles;
 import com.reimbursement.services.AuthService;
@@ -13,8 +15,10 @@ import io.javalin.http.ForbiddenResponse;
 
 public class AuthController {
 
-    private UserService us = new UserService();
-    private AuthService as = new AuthService();
+    private UserDao ud = new UserDaoImpl();
+
+    private UserService us = new UserService(ud);
+    private AuthService as = new AuthService(ud);
     private UserRoles ur;
     private ObjectMapper mapper = new ObjectMapper();
     private LoggingSingleton logger = LoggingSingleton.getLogger();
@@ -29,7 +33,7 @@ public class AuthController {
             System.out.println(lo.username + " , " + lo.password);
 
             if(!as.loginUser(lo.username, lo.password)){
-                ctx.status(403);
+                ctx.status(400);
                 ctx.result("Username or password is incorrect");
             }else {
 
@@ -40,7 +44,7 @@ public class AuthController {
                 ctx.req.getSession().setAttribute("loggedIn", user.getUsername());
                 ctx.req.getSession().setAttribute("userRole", user.getUserRole().ordinal());
 
-                ctx.header("pid", "" + user.getUserId());
+                ctx.header("id", "" + user.getUserId());
                 ctx.header("loggedIn", user.getUsername());
                 ctx.header("userRole", String.valueOf(user.getUserRole().ordinal()));
 
