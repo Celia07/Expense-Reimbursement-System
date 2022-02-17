@@ -1,17 +1,5 @@
 const URL = 'http://localhost:7000';
 
-function handleErrors(response) {
-    if (!response.ok) {
-        if (response.status == 403){
-            window.location.href = "forbiddenError.html"
-        }else if (response.status == 500){
-            window.location.href = "internalServerError.html"
-        }
-        throw Error(response.statusText);
-    } 
-    return response;
-}
-
 function SetCookie(c_name,value)
 	{
 		document.cookie=c_name+ "=" + value;
@@ -48,10 +36,8 @@ function populateEmployeeTable(data){
 (()=>{
     let apiUrl = `${URL}/people`;
     fetch(apiUrl)
-    .then(handleErrors)
         .then((res) => res.json())
         .then((data) => {
             populateEmployeeTable(data);
-        })
-        .catch(error => console.log(error) );
+        });
 })();

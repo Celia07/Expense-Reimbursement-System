@@ -1,18 +1,5 @@
 const URL = 'http://localhost:7000';
 
-function handleErrors(response) {
-    if (!response.ok) {
-        if (response.status == 403){
-            window.location.href = "forbiddenError.html"
-        }else if (response.status == 500){
-            window.location.href = "internalServerError.html"
-        }
-        throw Error(response.statusText);
-    } 
-    return response;
-}
-
-
 function SetCookie(c_name,value)
 	{
 		document.cookie=c_name+ "=" + value;
@@ -126,7 +113,6 @@ function populateResolvedTable(data){
 (()=>{
     let apiUrl = `${URL}/user/information`;
     fetch(apiUrl)
-    .then(handleErrors)
         .then((res) => res.json())
         .then((data) => {
             document.getElementById('welcomeMessage').innerHTML = "Welcome Back " 
@@ -136,29 +122,24 @@ function populateResolvedTable(data){
                 document.getElementById('viewInfo').removeAttribute("hidden");
                 let apiUrl2 = `${URL}/user/user-pending`;
                 fetch(apiUrl2)
-                .then(handleErrors)
                 .then((res) => res.json())
                 .then((data) => populatePendingTable(data));
                 let apiUrl3 = `${URL}/user/user-resolved`;
                 fetch(apiUrl3)
-                .then(handleErrors)
                 .then((res) => res.json())
                 .then((data) => populateResolvedTable(data));
             } else if (data.userRole == "MANAGER"){
                 document.getElementById('peopleOption').removeAttribute("hidden");
                 let apiUrl2 = `${URL}/requests/requests-pending`;
                 fetch(apiUrl2)
-                .then(handleErrors)
                 .then((res) => res.json())
                 .then((data) => populatePendingTable(data));
                 let apiUrl3 = `${URL}/requests/requests-resolved`;
                 fetch(apiUrl3)
-                .then(handleErrors)
                 .then((res) => res.json())
                 .then((data) => populateResolvedTable(data));
             }
-        })
-        .catch(error => console.log(error) );
+        });
 })();
 
 
