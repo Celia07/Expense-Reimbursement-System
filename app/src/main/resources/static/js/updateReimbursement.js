@@ -4,13 +4,8 @@ const USERNAME = getCookie('reimbId');
 
 function handleErrors(response) {
     if (!response.ok) {
-        if (response.status == 403){
-            window.location.href = "forbiddenError.html"
-        }else if (response.status == 500){
-            window.location.href = "internalServerError.html"
-        }
         throw Error(response.statusText);
-    } 
+    }
     return response;
 }
 
@@ -35,7 +30,6 @@ let reimbId;
 (()=>{
     let apiUrl = `${URL}/reimbursement-by-id`;
     fetch(apiUrl)
-    .then(handleErrors)
         .then((res) => res.json())
         .then((data) => {
             document.getElementById('cell1').innerHTML = "Reimbursement Id: " + `${data.reimbId}`
