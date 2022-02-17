@@ -52,16 +52,6 @@ public class UserController {
             logger.info(employee.getUserRole()+ " " + employee.getFirstName() + " " + employee.getLastName() +
                     " has updated their personal information");
 
-            //for our front end to retrieve
-
-            ctx.req.getSession().invalidate();
-
-            User user = us.getUserById(employee.getUserId());
-
-            ctx.req.getSession().setAttribute("id", "" + user.getUserId());
-            ctx.req.getSession().setAttribute("loggedIn", user.getUsername());
-            ctx.req.getSession().setAttribute("userRole", user.getUserRole().ordinal());
-
         } catch (Exception e) {
             ctx.status(400);
             e.printStackTrace();
