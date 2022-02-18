@@ -45,3 +45,7 @@ m
 =app/src/main/java/com/reimbursement/services/UserService.java,4\d\4dae5ef25a4854faeacd1df045dbf33ed0f1d6dc
 s
 Capp/src/main/java/com/reimbursement/Controllers/UserController.java,a\a\aaf56b4962bef9bf74c9ac5f59e6475225712b39
+c
+3app/src/main/java/com/reimbursement/JavalinApp.java,7\1\71da0497d55294c5fefdce94b01104b1cdb73264
+s
+Capp/src/main/java/com/reimbursement/Controllers/AuthController.java,8\7\870ac251d26d2798afbc9ab7135ebbb6f3118a2f

@@ -1,5 +1,6 @@
 
-const URL = 'http://localhost:7000';
+const URL = 'http://34.74.204.142:7000';
+// const URL = 'http://localhost:7000';
 
 function handleErrors(response) {
     if (!response.ok) {
