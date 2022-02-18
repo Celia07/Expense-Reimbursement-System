@@ -1,7 +1,6 @@
 const URL = 'http://localhost:7000';
 
-<<<<<<< HEAD
-=======
+
 function handleErrors(response) {
     if (!response.ok) {
         if (response.status == 403){
@@ -15,7 +14,7 @@ function handleErrors(response) {
 }
 
 
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
+
 function SetCookie(c_name,value)
 	{
 		document.cookie=c_name+ "=" + value;
@@ -38,12 +37,6 @@ function populatePendingTable(data){
 
         // Add some text to the new cells:
 
-<<<<<<< HEAD
-        cell1.innerHTML = "<a href='http://localhost:7000/updateReimbursement.html' onClick = 'SetCookie(`reimbId`, `" + idParam + "`)'>" + 
-        idParam + "</a>"
-=======
-        
-       
         cell1.innerHTML = idParam;
 
         
@@ -96,8 +89,6 @@ function populatePendingTableManager(data){
 
         
 
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
-
         cell2.innerHTML = "$"+`${itm.amount}`;
         
 
@@ -120,18 +111,16 @@ function populatePendingTableManager(data){
         cell6.innerHTML = `${itm.reimbType}`;
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
+
+
 }
 
 
 
 let resolvedTable = document.getElementById("resolved")
 
-<<<<<<< HEAD
-=======
+
 function populateResolvedTableManager(data){
     for(itm of data){
         var row = resolvedTable.insertRow(-1);
@@ -192,7 +181,7 @@ function populateResolvedTableManager(data){
 
 }
 
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
+
 function populateResolvedTable(data){
     for(itm of data){
         var row = resolvedTable.insertRow(-1);
@@ -207,10 +196,9 @@ function populateResolvedTable(data){
         var cell8 = row.insertCell(7);
 
         // Add some text to the new cells:
-<<<<<<< HEAD
-=======
+
         // cell1.outerHTML='<th scope = "row" style = `text-align:center`>' + "$"+`${itm.amount}`+ '</th>';
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
+
         cell1.innerHTML = "$"+`${itm.amount}`;
         
 
@@ -252,27 +240,16 @@ function populateResolvedTable(data){
 
     }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
+
+
 }
 
 (()=>{
     let apiUrl = `${URL}/user/information`;
     fetch(apiUrl)
-<<<<<<< HEAD
-        .then((res) => res.json())
-        .then((data) => {
-            document.getElementById('welcomeMessage').innerHTML = "Welcome Back " 
-            + `${data.firstName}` + " " + `${data.lastName}`+"!";
-            if(data.userRole == "EMPLOYEE"){
-                document.getElementById('submitOption').removeAttribute("hidden");
-                document.getElementById('viewInfo').removeAttribute("hidden");
-                let apiUrl2 = `${URL}/user/user-pending`;
-                fetch(apiUrl2)
-=======
+
     .then(handleErrors)
         .then((res) => res.json())
         .then((data) => {
@@ -288,30 +265,12 @@ function populateResolvedTable(data){
                 let apiUrl2 = `${URL}/user/user-pending`;
                 fetch(apiUrl2)
                 .then(handleErrors)
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
+
                 .then((res) => res.json())
                 .then((data) => populatePendingTable(data));
                 let apiUrl3 = `${URL}/user/user-resolved`;
                 fetch(apiUrl3)
-<<<<<<< HEAD
-                .then((res) => res.json())
-                .then((data) => populateResolvedTable(data));
-            } else if (data.userRole == "MANAGER"){
-                document.getElementById('peopleOption').removeAttribute("hidden");
-                let apiUrl2 = `${URL}/requests/requests-pending`;
-                fetch(apiUrl2)
-                .then((res) => res.json())
-                .then((data) => populatePendingTable(data));
-                let apiUrl3 = `${URL}/requests/requests-resolved`;
-                fetch(apiUrl3)
-                .then((res) => res.json())
-                .then((data) => populateResolvedTable(data));
-            }
-        });
-})();
 
-
-=======
                 .then(handleErrors)
                 .then((res) => res.json())
                 .then((data) => populateResolvedTable(data));
@@ -334,7 +293,7 @@ function populateResolvedTable(data){
 
 
 
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
+
 // (()=>{
 //     let apiUrl = `${URL}/user/user-pending`;
 //     fetch(apiUrl)

@@ -1,7 +1,6 @@
 const URL = 'http://localhost:7000';
 
-<<<<<<< HEAD
-=======
+
 function handleErrors(response) {
     if (!response.ok) {
         if (response.status == 403){
@@ -14,7 +13,7 @@ function handleErrors(response) {
     return response;
 }
 
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
+
 function SetCookie(c_name,value)
 	{
 		document.cookie=c_name+ "=" + value;
@@ -38,11 +37,9 @@ function populateEmployeeTable(data){
 
         // <a href="#" onClick="SetCookie('COOKIENAME','COOKIEVALUE','1')"></a>
         cell2.innerHTML = `${itm.firstName}` + ' ' + `${itm.lastName}`
-<<<<<<< HEAD
-        cell3.innerHTML = "<a href='http://localhost:7000/specificUser.html' onClick = 'SetCookie(`username`, `" + userParam + "`)'>" + 
-=======
+
+
         cell3.innerHTML = "<a href='specificUser.html' onClick = 'SetCookie(`username`, `" + userParam + "`)'>" + 
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
         userParam + "</a>";
         
         cell4.innerHTML = `${itm.email}`;
@@ -55,12 +52,6 @@ function populateEmployeeTable(data){
 (()=>{
     let apiUrl = `${URL}/people`;
     fetch(apiUrl)
-<<<<<<< HEAD
-        .then((res) => res.json())
-        .then((data) => {
-            populateEmployeeTable(data);
-        });
-=======
     .then(handleErrors)
         .then((res) => res.json())
         .then((data) => {
@@ -72,5 +63,4 @@ function populateEmployeeTable(data){
             populateEmployeeTable(data);
         })
         .catch(error => console.log(error) );
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 })();

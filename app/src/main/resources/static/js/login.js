@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 const URL = 'http://localhost:7000';
 
 function handleErrors(response) {
@@ -12,25 +12,8 @@ function handleErrors(response) {
     return response;
 }
 
-=======
-const URL = 'http://34.74.204.142:7000';
-// const URL = 'http://localhost:7000';
-
-function handleErrors(response) {
-    if (!response.ok) {
-        if (response.status == 403){
-            window.location.href = "forbiddenError.html"
-        }else if (response.status == 500){
-            window.location.href = "internalServerError.html"
-        }
-        document.getElementById('badLogin').removeAttribute('hidden')
-        throw Error(response.statusText);
-    } 
-    return response;
-}
 
 
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 let post = async () => {
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
@@ -62,11 +45,7 @@ let post = async () => {
     })
     .then((res)=> {
         console.log(res)
-<<<<<<< HEAD
-        window.location.href = "http://localhost:7000/homePage.html"
-=======
         window.location.href = "homePage.html"
->>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
     })
     .catch(error => console.log(error) );
     
