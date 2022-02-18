@@ -1,13 +1,45 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Employees Page Test</title>
-</head>
-<body>
-    <h1 id = 'welcomeMessage'>All Employees</h1>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link  rel="stylesheet" href="./css/bootstrap.min.css">
+    <link  rel="stylesheet" href="./css/style.css">
+
+    <title> Employee Page </title>
+  </head>
+  <!-------------------------------------------------------------------------------------------------->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ERS</a>
+      <a class="navbar-brand" href="#" style="max-width: 30%;">
+        <img id="resize" src="image/ESR.png" class="img-fluid">
+     </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="homePage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="logout.html">Logout</a>
+          </li>
+  </nav>
+
+
+  <!-------------------------------------------------------------------------------------------------->
+
+<body class="loginstyle">
+
+    <p class="blocktext">Details of employee below</p><br>
+    </div>
     <div>
-        <table id="employees" border = "1" height = 100%>
+      <table id="employees"  class="table table-hovertable-active">
             <thead>
                 <tr>
                   <th>Employee ID</th>
@@ -17,9 +49,17 @@
                 </tr>
               </thead>
               <tbody></tbody>
-            </table>
+        </table>
     </div>
 
-    <script src="./js/employees.js"></script>
+</body>
+<!----------------------------------------------------------------------------------------------->
+    <footer>
+      <h6 class="footer-text"> Copyright Project 01(Bryan & Celia) </h6>
+    </footer>
+
+    <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/employees.js"></script>
+</html>
 </body>
 </html>

@@ -1,6 +1,18 @@
 const URL = 'http://localhost:7000';
 const USERNAME = getCookie('username');
 
+function handleErrors(response) {
+    if (!response.ok) {
+        if (response.status == 403){
+            window.location.href = "forbiddenError.html"
+        }else if (response.status == 500){
+            window.location.href = "internalServerError.html"
+        }
+        throw Error(response.statusText);
+    } 
+    return response;
+}
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -128,10 +140,14 @@ function populateResolvedTable(data){
 (()=>{
     let apiUrl2 = `${URL}/${USERNAME}/pending`;
     fetch(apiUrl2)
+    .then(handleErrors)
     .then((res) => res.json())
-    .then((data) => populatePendingTable(data));
+    .then((data) => populatePendingTable(data))
+    .catch(error => console.log(error) );
     let apiUrl3 = `${URL}/${USERNAME}/resolved`;
     fetch(apiUrl3)
+    .then(handleErrors)
     .then((res) => res.json())
-    .then((data) => populateResolvedTable(data));
+    .then((data) => populateResolvedTable(data))
+    .catch(error => console.log(error) );
 })();

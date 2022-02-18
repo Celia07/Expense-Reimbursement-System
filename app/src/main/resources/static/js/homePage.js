@@ -118,6 +118,7 @@ function populateResolvedTable(data){
             document.getElementById('welcomeMessage').innerHTML = "Welcome Back " 
             + `${data.firstName}` + " " + `${data.lastName}`+"!";
             if(data.userRole == "EMPLOYEE"){
+                document.getElementById('accountInfo').removeAttribute("hidden");
                 document.getElementById('submitOption').removeAttribute("hidden");
                 document.getElementById('viewInfo').removeAttribute("hidden");
                 let apiUrl2 = `${URL}/user/user-pending`;
