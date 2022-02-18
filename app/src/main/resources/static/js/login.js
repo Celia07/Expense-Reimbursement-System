@@ -27,12 +27,12 @@ let post = async () => {
 
     let req = await fetch(`${URL}/login`, {
         method: 'POST',
-        // headers: {
-        //     'Content-Type': 'application/json',
-        //     'Access-Control-Expose-Headers': 'id',
-        //     'Access-Control-Expose-Headers': 'loggedIn',
-        //     'Access-Control-Expose-Headers': 'userRole'
-        // },
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Expose-Headers': 'id',
+            'Access-Control-Expose-Headers': 'loggedIn',
+            'Access-Control-Expose-Headers': 'userRole'
+        },
         body: JSON.stringify(loginObj)
     })
     .then(handleErrors)
