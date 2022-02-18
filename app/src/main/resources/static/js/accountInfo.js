@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+const URL = 'http://localhost:7000';
+
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 let updateButton = document.getElementById('updateButton');
 let updateOtherInfo = document.getElementById('updateOtherInformation');
 let submitUpdateButton = document.getElementById('submitUpdateButton');
@@ -13,6 +18,21 @@ let newPass = document.getElementById('newPass');
 
 updatePassButton.addEventListener('click', togglePassForm);
 
+<<<<<<< HEAD
+=======
+function handleErrors(response) {
+    if (!response.ok) {
+        if (response.status == 403){
+            window.location.href = "forbiddenError.html"
+        }else if (response.status == 500){
+            window.location.href = "internalServerError.html"
+        }
+        throw Error(response.statusText);
+    } 
+    return response;
+}
+
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 
 function toggleOtherInfoForm(){
     if (updateOtherInfo.hasAttribute('hidden')){
@@ -40,11 +60,46 @@ function togglePassForm(){
 
 // Start by creating an anonymous function which fills out the inner html
 // with the information from the user
+<<<<<<< HEAD
 
 
 
 
 
+=======
+var firstNameParam;
+var lastNameParam;
+var usernameParam;
+var emailParam;
+
+// Start by creating an anonymous function which fills out the inner html
+// with the information from the user
+
+(()=>{
+    let apiUrl = `${URL}/user/information/`;
+    console.log("i retrieved user info");
+    fetch(apiUrl)
+    .then(handleErrors)
+        .then((res) => res.json())
+        .then((data) => {
+            document.getElementById('navbar').removeAttribute('hidden')
+            document.getElementById('welcomeMessage').removeAttribute('hidden')
+            document.getElementById('mainContainer').removeAttribute('hidden')
+            document.getElementById('footer').removeAttribute('hidden')
+            document.getElementById('submitRequest').removeAttribute('hidden')
+            document.getElementById('accountInfo').removeAttribute('hidden')
+            document.getElementById('cell1').innerHTML = "Employee ID: " + `${data.userId}`
+            document.getElementById('cell2').innerHTML = "First Name: " + `${data.firstName}`
+            firstNameParam = `${data.firstName}`;
+            document.getElementById('cell3').innerHTML = "Last Name: " + `${data.lastName}`
+            lastNameParam = `${data.lastName}`;
+            document.getElementById('cell4').innerHTML = "Username: " + `${data.username}`
+            usernameParam = `${data.username}`;
+            document.getElementById('cell5').innerHTML = "Email: " + `${data.email}`
+            emailParam = `${data.email}`;
+        });
+})();
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 
 
 // We need to set it up so when the submit changes button is clicked
@@ -57,19 +112,153 @@ function togglePassForm(){
 // send the old email, I'd do this with an if statement
 
 
+<<<<<<< HEAD
 
 
 
+=======
+let changeAccountInfo = async () => {
+    let FirstName;
+    if (document.getElementById('firstName').value == ""){
+        FirstName = firstNameParam;
+    }else{
+        FirstName = document.getElementById('firstName').value;
+    }
+    
+    let LastName;
+    if(document.getElementById('lastName').value==""){
+        LastName= lastNameParam;
+    }else{
+        LastName = document.getElementById('lastName').value;
+    }
+
+    let Username;
+    if(document.getElementById('username').value==""){
+        Username=usernameParam;
+    }else{
+        Username=document.getElementById('username').value;
+    }
+        
+    let email;
+    if(document.getElementById('email').value==""){
+        email=emailParam;
+    }else{
+        email=document.getElementById('email').value;
+    }
+
+
+
+    let  updateInformationObject = {
+        FirstName,
+        LastName,
+        Username,
+        email 
+    };
+
+    console.log("i changed accountinfo");
+    const requestOptions = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updateInformationObject )
+    };
+
+    let req= await fetch(`${URL}/user/information/`, requestOptions )
+    .then(handleErrors)
+    .then((res)=> {
+        if (res.status == 200) {
+            window.location.href = "accountInfo.html"
+          }else {
+            throw Error(response.statusText);
+          }
+    })
+    .catch(error => console.log(error) );
+    
+}
+// We need to set it up so when the submit changes button is clicked
+// the changes get sent, start with the other information
+
+
+// We should start by creating a function called putOtherInfo
+// this will look very similar to the stuff in the submitRequest.js file
+// Remember, if a field is left blank the update should just send the old
+// value, like if the email form is left blank, the put request should 
+// send the old email, I'd do this with an if statement
+// We need to set it up so when the submit changes button is clicked
+// the changes get sent, start with the other information
+
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 
 
 // After that function is created, we need one to update the password
 // This should be a function again like the submitRequest.js file, but
 // we need to send the old password and the new password in a put request
 
+<<<<<<< HEAD
+=======
+// var oldPassParam;
+// var nerPassParam;
+
+// (()=>{
+//     let apiUrl = `${URL}/user/information/`;
+//     console.log("i retrieved password ");
+//     fetch(apiUrl)
+//         .then((res) => res.json())
+//         .then((data) => {
+//             document.getElementById('oldPass').innerHTML = "oldPass: " + `${data.oldPass}`
+//             oldPassParam = `${data.oldPass}`;
+//         });
+// })();
+    
+
+let changePassword = async () => {
+    let oldPass= document.getElementById('oldPass').value;
+    
+    let newPass= document.getElementById('newPass').value;
+   
+
+    let updateInformationPasswordObject = {
+        oldPass  ,
+        newPass 
+    };
+
+    
+
+    const requestOptions = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(updateInformationPasswordObject)
+        };
+    
+        let req= await fetch(`${URL}/user/information/password`, requestOptions)
+        .then(handleErrors)
+        .then((res)=> {
+            if (res.status == 200) {
+                console.log("i changed password");
+                window.location.href = "accountInfo.html"
+              }else {
+                throw Error(response.statusText);
+              }
+        })
+        .catch(error => console.log(error) );
+    
+    }
+
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 
 
 
 // Finally, we need to create event listeners that listen for clicks on
 // the submit buttons, these have been put into variables already at the
 // top, just create listeners that listen for a click and run the
+<<<<<<< HEAD
 // respective functions you created above.
+=======
+// respective functions you created above.
+
+console.log("get value of password" + newPass );
+
+let updateInfo= document.getElementById('submitUpdateButton').addEventListener('click',changeAccountInfo);
+
+
+let updatePassword= document.getElementById('submitPassButton').addEventListener('click',changePassword);
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9

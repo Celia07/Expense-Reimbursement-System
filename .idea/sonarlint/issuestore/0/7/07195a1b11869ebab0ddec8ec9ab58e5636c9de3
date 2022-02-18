@@ -1,0 +1,29 @@
+
+X	java:S125u"<This block of commented-out lines of code should be removed.(©Œ»°8ıÛ±¦ğ/
+X	java:S125w"<This block of commented-out lines of code should be removed.(¡¸æ˜8ıÛ±¦ğ/
+Y	java:S125—"<This block of commented-out lines of code should be removed.(îº¶¹8€Ü±¦ğ/
+q
+java:S1128"ORemove this unused import 'com.fasterxml.jackson.core.JsonProcessingException'.(ßÔïÇûÿÿÿÿ8„Ü±¦ğ/
+h
+java:S1128"FRemove this unused import 'com.reimbursement.model.ReimbursementType'.(×Ù”®ùÿÿÿÿ8„Ü±¦ğ/
+
+java:S1192!"dDefine a constant instead of duplicating this literal "Must be a Manager to view this page" 6 times.(ŠØ‰8…Ü±¦ğ/
+e
+java:S1192X"IDefine a constant instead of duplicating this literal "loggedIn" 4 times.(áÄa8…Ü±¦ğ/
+f
+java:S1192 "IDefine a constant instead of duplicating this literal "userRole" 6 times.(Ïèô†8†Ü±¦ğ/
+p
+java:S1104¸"SMake reimbId a static final constant or non-public and provide accessors if needed.(ÎÑæP8‡Ü±¦ğ/
+u
+java:S1104¹"WMake reimbStatus a static final constant or non-public and provide accessors if needed.(ı¼òŒ8‡Ü±¦ğ/
+i
+java:S1104½"RMake amount a static final constant or non-public and provide accessors if needed.(±±õÏ
+s
+java:S1104¾"WMake description a static final constant or non-public and provide accessors if needed.(¹ÿ†ğÿÿÿÿÿ
+l
+java:S1104¿"UMake reimbType a static final constant or non-public and provide accessors if needed.(ªÁñ
+o	java:S101·"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Õù şÿÿÿÿ8ˆÜ±¦ğ/
+h	java:S101¼"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·Ş®øÿÿÿÿ
+_
+java:S4973Ÿ"<Strings and Boxed types should be compared using "equals()".(±üü—ıÿÿÿÿ8ŠÜ±¦ğ/
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘Ï¤(

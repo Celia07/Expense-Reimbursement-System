@@ -1,6 +1,21 @@
 const URL = 'http://localhost:7000';
 const USERNAME = getCookie('username');
 
+<<<<<<< HEAD
+=======
+function handleErrors(response) {
+    if (!response.ok) {
+        if (response.status == 403){
+            window.location.href = "forbiddenError.html"
+        }else if (response.status == 500){
+            window.location.href = "internalServerError.html"
+        }
+        throw Error(response.statusText);
+    } 
+    return response;
+}
+
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -34,8 +49,16 @@ function populatePendingTable(data){
 
         // Add some text to the new cells:
 
+<<<<<<< HEAD
         cell1.innerHTML = "<a href='http://localhost:7000/updateReimbursement.html' onClick = 'SetCookie(`reimbId`, `" + idParam + "`)'>" + 
         idParam + "</a>"
+=======
+        cell1.outerHTML='<th scope = "row" style = `text-align:center`>' + "<a href='updateReimbursement.html' onClick = 'SetCookie(`reimbId`, `" + idParam + "`)'>" + 
+        idParam + "</a>" + '</th>';
+
+        // cell1.innerHTML = "<a href='http://localhost:7000/updateReimbursement.html' onClick = 'SetCookie(`reimbId`, `" + idParam + "`)'>" + 
+        // idParam + "</a>"
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 
         cell2.innerHTML = "$"+`${itm.amount}`;
         
@@ -78,8 +101,13 @@ function populateResolvedTable(data){
         var cell7 = row.insertCell(6);
         var cell8 = row.insertCell(7);
 
+<<<<<<< HEAD
         // Add some text to the new cells:
         cell1.innerHTML = "$"+`${itm.amount}`;
+=======
+        cell1.outerHTML='<th scope = "row" style = `text-align:center`>' + "$"+`${itm.amount}`+ '</th>';
+        // cell1.innerHTML = "$"+`${itm.amount}`;
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
         
 
         const milliseconds = itm.reimbSubmitted;
@@ -128,10 +156,32 @@ function populateResolvedTable(data){
 (()=>{
     let apiUrl2 = `${URL}/${USERNAME}/pending`;
     fetch(apiUrl2)
+<<<<<<< HEAD
     .then((res) => res.json())
     .then((data) => populatePendingTable(data));
     let apiUrl3 = `${URL}/${USERNAME}/resolved`;
     fetch(apiUrl3)
     .then((res) => res.json())
     .then((data) => populateResolvedTable(data));
+=======
+    .then(handleErrors)
+    
+    .then((res) => res.json())
+    .then((data) =>{
+        document.getElementById('navbar').removeAttribute('hidden')
+        document.getElementById('welcomeMessage').removeAttribute('hidden')
+        document.getElementById('welcomeMessage').innerHTML = "Viewing requests from user: " + `${USERNAME}`;
+        document.getElementById('mainContainer').removeAttribute('hidden')
+        document.getElementById('footer').removeAttribute('hidden')
+        document.getElementById('viewEmployees').removeAttribute('hidden')
+        populatePendingTable(data)
+    })
+    .catch(error => console.log(error) );
+    let apiUrl3 = `${URL}/${USERNAME}/resolved`;
+    fetch(apiUrl3)
+    .then(handleErrors)
+    .then((res) => res.json())
+    .then((data) => populateResolvedTable(data))
+    .catch(error => console.log(error) );
+>>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
 })();
