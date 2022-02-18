@@ -46,7 +46,7 @@ let post = async () => {
     })
     .then((res)=> {
         console.log(res)
-        window.location.href = "http://localhost:7000/homePage.html"
+        window.location.href = "homePage.html"
     })
     .catch(error => console.log(error) );
     

@@ -36,6 +36,11 @@ let reimbId;
     let apiUrl = `${URL}/reimbursement-by-id`;
     fetch(apiUrl)
     .then(handleErrors)
+    document.getElementById('navbar').removeAttribute('hidden')
+    document.getElementById('welcomeMessage').removeAttribute('hidden')
+    document.getElementById('mainContainer').removeAttribute('hidden')
+    document.getElementById('footer').removeAttribute('hidden')
+    document.getElementById('viewEmployees').removeAttribute('hidden')
         .then((res) => res.json())
         .then((data) => {
             document.getElementById('cell1').innerHTML = "Reimbursement Id: " + `${data.reimbId}`
@@ -68,7 +73,7 @@ let put = async () => {
     .then(handleErrors)
     .then((res)=> {
         if (res.status == 200) {
-            window.location.href = "http://localhost:7000/homePage.html"
+            window.location.href = "homePage.html"
           }else {
             throw Error(response.statusText);
           }

@@ -23,27 +23,3 @@ java:S1104e"SMake newPass a static final constant or non-public and provide acc
 g	java:S101\"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(˜–ªÄÿÿÿÿÿ
 a	java:S101c"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¶­ˆt
 n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘Ï¤(
-n	java:S116]"TRename this field "FirstName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤óôåùÿÿÿÿ
-h	java:S116^"SRename this field "LastName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ğ¢¥
-h	java:S116_"SRename this field "Username" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¨Ö
-W
-java:S1128"BRemove this unused import 'com.reimbursement.model.Reimbursement'.(ûÒŠj
-^
-java:S1128"HRemove this unused import 'com.reimbursement.model.ReimbursementStatus'.(¥”«å
-^
-java:S1192$"IDefine a constant instead of duplicating this literal "loggedIn" 4 times.(áÄa
-p
-java:S1104]"UMake FirstName a static final constant or non-public and provide accessors if needed.(¤óôåùÿÿÿÿ
-j
-java:S1104^"TMake LastName a static final constant or non-public and provide accessors if needed.(÷ğ¢¥
-j
-java:S1104_"TMake Username a static final constant or non-public and provide accessors if needed.(Ö¨Ö
-l
-java:S1104`"QMake email a static final constant or non-public and provide accessors if needed.(¾Æ†Ëıÿÿÿÿ
-n
-java:S1104d"SMake oldPass a static final constant or non-public and provide accessors if needed.(ÚŞ´üÿÿÿÿ
-n
-java:S1104e"SMake newPass a static final constant or non-public and provide accessors if needed.(€Šïóüÿÿÿÿ
-g	java:S101\"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(˜–ªÄÿÿÿÿÿ
-a	java:S101c"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¶­ˆt
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘Ï¤(

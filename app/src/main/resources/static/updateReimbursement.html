@@ -9,25 +9,42 @@
     <link  rel="stylesheet" href="css/bootstrap.min.css">
     <link  rel="stylesheet" href="css/style.css">
 
-    <title> Submission Page </title>
+    <title> Update Page </title>
   </head>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id = "navbar" hidden>
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">ERS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="http://localhost:7000/homePage.html">Home</a>
-          </li>
+          <a class="navbar-brand" href="#">ERS</a>
+          <a class="navbar-brand" href="#" style="max-width: 30%;">
+            <img id="resize" src="image/ESR.png" class="img-fluid">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="homePage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="submitRequest.html" id = "submitRequest" hidden>Submit a new Request</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="employees.html" id = "viewEmployees" hidden>View All Employees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="accountInfo.html" id="accountInfo" hidden>View Account Info</a>
+              </li>
+                <a class="nav-link active" aria-current="page" href="logoutPage.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+      </div>
   </nav>
 <body>
     <div>
-        <h1 id = 'welcomeMessage'>Update a Reimbursement Request Below</h1>
+        <h1 id = 'welcomeMessage' hidden>Update a Reimbursement Request Below</h1>
     </div>
-    <div class="container">
+    <div class="container" id = "mainContainer" hidden>
         <div>
             <p id = "cell1">Reimbursement Id: </p>
             <p id = "cell2">Amount: </p>
@@ -53,8 +70,8 @@
     
 </body>
 <footer>
-    <h6 class="footer-text"> Copyright Project 01(Bryan & Celia) </h6>
-  </footer>
+  <h6 class="footer-text" id = "footer" hidden> Copyright Project 01(Bryan & Celia) </h6>
+</footer>
   <script src="./js/updateReimbursement.js"></script>
  <script src="./js/bootstrap.bundle.min.js" ></script>
   </html>
