@@ -338,3 +338,4 @@ INFO - 2022-02-17T18:41:20.309 - MANAGER testjs Beverly has signed in
 INFO - 2022-02-17T18:42:55.829 - EMPLOYEE admin admin has signed in
 INFO - 2022-02-17T18:45:01.256 - EMPLOYEE admin admin has signed in
 INFO - 2022-02-17T18:45:15.600 - EMPLOYEE Gallagher admin has updated their personal information
+INFO - 2022-02-18T10:18:46.297 - MANAGER testjs Beverly has signed in
