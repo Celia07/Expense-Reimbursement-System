@@ -1,7 +1,10 @@
 const URL = 'http://localhost:7000';
 const USERNAME = getCookie('username');
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 7fe0cf47673571f5bf8020dad373989311afb260
 function handleErrors(response) {
     if (!response.ok) {
         if (response.status == 403){
@@ -14,7 +17,10 @@ function handleErrors(response) {
     return response;
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 7fe0cf47673571f5bf8020dad373989311afb260
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -149,6 +155,11 @@ function populateResolvedTable(data){
 (()=>{
     let apiUrl2 = `${URL}/${USERNAME}/pending`;
     fetch(apiUrl2)
+<<<<<<< HEAD
+    .then(handleErrors)
+    .then((res) => res.json())
+    .then((data) => populatePendingTable(data))
+=======
 
     .then(handleErrors)
     
@@ -162,6 +173,7 @@ function populateResolvedTable(data){
         document.getElementById('viewEmployees').removeAttribute('hidden')
         populatePendingTable(data)
     })
+>>>>>>> 7fe0cf47673571f5bf8020dad373989311afb260
     .catch(error => console.log(error) );
     let apiUrl3 = `${URL}/${USERNAME}/resolved`;
     fetch(apiUrl3)
@@ -169,5 +181,8 @@ function populateResolvedTable(data){
     .then((res) => res.json())
     .then((data) => populateResolvedTable(data))
     .catch(error => console.log(error) );
+<<<<<<< HEAD
+=======
 
+>>>>>>> 7fe0cf47673571f5bf8020dad373989311afb260
 })();
