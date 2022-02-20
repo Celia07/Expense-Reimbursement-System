@@ -39,14 +39,13 @@ let reimbId;
     fetch(apiUrl)
 
     .then(handleErrors)
-    document.getElementById('navbar').removeAttribute('hidden')
-    document.getElementById('welcomeMessage').removeAttribute('hidden')
-    document.getElementById('mainContainer').removeAttribute('hidden')
-    document.getElementById('footer').removeAttribute('hidden')
-    document.getElementById('viewEmployees').removeAttribute('hidden')
-
         .then((res) => res.json())
         .then((data) => {
+            document.getElementById('navbar').removeAttribute('hidden')
+            document.getElementById('welcomeMessage').removeAttribute('hidden')
+            document.getElementById('mainContainer').removeAttribute('hidden')
+            document.getElementById('footer').removeAttribute('hidden')
+            document.getElementById('viewEmployees').removeAttribute('hidden')
             document.getElementById('cell1').innerHTML = "Reimbursement Id: " + `${data.reimbId}`
             reimbId = `${data.reimbId}`;
             document.getElementById('cell2').innerHTML = "Amount: $" + `${data.amount}`
