@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc0bdc4-c580-46de-a6d0-de8452c9075a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71da0497d55294c5fefdce94b01104b1cdb73264" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/870ac251d26d2798afbc9ab7135ebbb6f3118a2f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6f482f1f04459ca1f6cb8f07b97ff3cb17b0221" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea18210957e32f96c89baa020f4c8e4636d11df8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/js/submitRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/js/submitRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/submitRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/submitRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

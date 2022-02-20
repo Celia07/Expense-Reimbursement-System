@@ -342,3 +342,5 @@ INFO - 2022-02-17T18:45:01.256 - EMPLOYEE admin admin has signed in
 INFO - 2022-02-17T18:45:15.600 - EMPLOYEE Gallagher admin has updated their personal information
 INFO - 2022-02-18T10:18:46.297 - MANAGER testjs Beverly has signed in
 >>>>>>> f864a9f942a78921379ea6cf95ab56f0c899ecf9
+INFO - 2022-02-20T14:02:18.610 - EMPLOYEE Test Employee has signed in
+INFO - 2022-02-20T14:02:39.828 - EMPLOYEE Test Employee has requested a reimbursement of 200.0
