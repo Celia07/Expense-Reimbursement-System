@@ -5,49 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc0bdc4-c580-46de-a6d0-de8452c9075a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07195a1b11869ebab0ddec8ec9ab58e5636c9de3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5fddb841b4cafb35c9dc2fed4081226afe60e400" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71da0497d55294c5fefdce94b01104b1cdb73264" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/870ac251d26d2798afbc9ab7135ebbb6f3118a2f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/4/a470df3001f6188f12128147702da4b444237d9e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aaf56b4962bef9bf74c9ac5f59e6475225712b39" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd9908d6b01e43fd7042ec346438ede59bd75d61" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6f482f1f04459ca1f6cb8f07b97ff3cb17b0221" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/ec436e5a5801d7770c31bd5efd714bafce3df2cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/DeprecatedPages/deprecatedAccountInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/DeprecatedPages/deprecatedEmployees.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/DeprecatedPages/deprecatedHomePage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/DeprecatedPages/deprecatedLogin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/DeprecatedPages/deprecatedSubmitRequest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/DeprecatedPages/deprecatedupdateReimbursement.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/forbiddenError.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/internalServerError.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/js/logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/static/logoutPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dae5ef25a4854faeacd1df045dbf33ed0f1d6dc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dae5ef25a4854faeacd1df045dbf33ed0f1d6dc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc0d3026d9f0f93592f87424c27c0ba5b3122006" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc0d3026d9f0f93592f87424c27c0ba5b3122006" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/reimbursement/Controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/accountInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/accountInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/employees.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/employees.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/homePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/js/accountInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/js/accountInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/js/employees.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/js/employees.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/js/homePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/js/homePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/js/specificUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/js/specificUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/js/submitRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/js/submitRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/js/updateReimbursement.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/js/updateReimbursement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/specificUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/specificUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/submitRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/submitRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/static/updateReimbursement.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/static/updateReimbursement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
