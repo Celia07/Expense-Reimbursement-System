@@ -39,6 +39,8 @@ let reimbId;
     fetch(apiUrl)
 
     .then(handleErrors)
+    
+
         .then((res) => res.json())
         .then((data) => {
             document.getElementById('navbar').removeAttribute('hidden')

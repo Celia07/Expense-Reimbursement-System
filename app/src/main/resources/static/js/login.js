@@ -70,5 +70,3 @@ let post = async () => {
 
 let loginSubmit = document.getElementById('login').addEventListener('click', post);
 
-
-

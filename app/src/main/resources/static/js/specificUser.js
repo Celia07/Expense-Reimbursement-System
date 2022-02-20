@@ -2,8 +2,6 @@ const URL = 'http://localhost:7000';
 const USERNAME = getCookie('username');
 
 
-
-
 function handleErrors(response) {
     if (!response.ok) {
         if (response.status == 403){
@@ -15,8 +13,6 @@ function handleErrors(response) {
     } 
     return response;
 }
-
-
 
 
 function getCookie(cname) {
@@ -154,7 +150,6 @@ function populateResolvedTable(data){
     let apiUrl2 = `${URL}/${USERNAME}/pending`;
     fetch(apiUrl2)
 
-
     .then(handleErrors)
     
     .then((res) => res.json())
@@ -167,7 +162,6 @@ function populateResolvedTable(data){
         document.getElementById('viewEmployees').removeAttribute('hidden')
         populatePendingTable(data)
     })
-
     .catch(error => console.log(error) );
     let apiUrl3 = `${URL}/${USERNAME}/resolved`;
     fetch(apiUrl3)
@@ -175,7 +169,5 @@ function populateResolvedTable(data){
     .then((res) => res.json())
     .then((data) => populateResolvedTable(data))
     .catch(error => console.log(error) );
-
-
 
 })();

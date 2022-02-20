@@ -247,4 +247,3 @@ let updateInfo= document.getElementById('submitUpdateButton').addEventListener('
 
 
 let updatePassword= document.getElementById('submitPassButton').addEventListener('click',changePassword);
-

@@ -59,5 +59,3 @@ let post = async () => {
 
 let submitRequest = document.getElementById('submitRequestButton').addEventListener('click', post);
 
-
-
