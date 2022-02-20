@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page Test</title>
+</head>
+<body>
+    <h1 id = 'welcomeMessage'>View/Update Account Information</h1>
+
+    <div>
+        <p id = "cell1">Employee ID: </p>
+        <p id = "cell2">First Name: </p>
+        <p id = "cell3">Last Name: </p>
+        <p id = "cell4">Username: </p>
+        <p id = "cell5">Email: </p>
+    </div>
+
+    <button id="updateButton">Update Information</button>
+    <button id="updatePassButton">Change Password</button>
+
+    <div>
+    <form id = "updateOtherInformation" hidden>
+        <label for="firstName">First Name: </label>
+        <input type="text" name = "firstName" id="firstName"/>
+
+        <label for="lastName">Last Name: </label>
+        <input type="text" name = "lastName" id="lastName"/>
+
+        <label for="username">Username: </label>
+        <input type="text" name = "username" id="username"/>
+
+        <label for="email">Email: </label>
+        <input type="text" name = "email" id="email"/>
+    </form>
+
+    <button id="submitUpdateButton" hidden>Submit Info</button>
+    </div>
+
+    <div>
+    <form id = "updatePassword" hidden>
+
+        <label for="oldPass">Old Password: </label>
+        <input type="password" name = "oldPass" id="oldPass"/>
+
+        <label for="newPass">New Password: </label>
+        <input type="password" name = "newPass" id="newPass"/>
+
+    </form>
+    <button id="submitPassButton" hidden>Submit New Password</button>
+    </div>
+
+    <div>
+        <p>Click  
+            <a href = "http://localhost:7000/homePage.html">here</a>
+             to go back to the Home Page</p></p>
+    </div>
+    
+    <script src="./js/accountInfo.js"></script>
+</body>
+</html>

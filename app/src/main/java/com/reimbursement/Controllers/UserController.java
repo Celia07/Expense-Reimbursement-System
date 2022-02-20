@@ -52,8 +52,6 @@ public class UserController {
             logger.info(employee.getUserRole()+ " " + employee.getFirstName() + " " + employee.getLastName() +
                     " has updated their personal information");
 
-            //for our front end to retrieve
-
             ctx.req.getSession().invalidate();
 
             User user = us.getUserById(employee.getUserId());

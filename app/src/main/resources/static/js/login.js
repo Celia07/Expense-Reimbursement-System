@@ -1,13 +1,18 @@
 
+
 const URL = 'http://localhost:7000';
-console.log("test");
+
 function handleErrors(response) {
     if (!response.ok) {
-        document.getElementById('badLogin').removeAttribute('hidden');
-        throw Error(response.statusText);
+        if(response.status == 400){
+            document.getElementById('badLogin').removeAttribute('hidden');
+            throw Error(response.statusText);
+        }
     }
     return response;
 }
+
+
 
 let post = async () => {
     let username = document.getElementById('username').value;
@@ -22,12 +27,12 @@ let post = async () => {
 
     let req = await fetch(`${URL}/login`, {
         method: 'POST',
-        // headers: {
-        //     'Content-Type': 'application/json',
-        //     'Access-Control-Expose-Headers': 'id',
-        //     'Access-Control-Expose-Headers': 'loggedIn',
-        //     'Access-Control-Expose-Headers': 'userRole'
-        // },
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Expose-Headers': 'id',
+            'Access-Control-Expose-Headers': 'loggedIn',
+            'Access-Control-Expose-Headers': 'userRole'
+        },
         body: JSON.stringify(loginObj)
     })
     .then(handleErrors)
@@ -40,7 +45,7 @@ let post = async () => {
     })
     .then((res)=> {
         console.log(res)
-        window.location.href = "http://localhost:7000/homePage.html"
+        window.location.href = "homePage.html"
     })
     .catch(error => console.log(error) );
     

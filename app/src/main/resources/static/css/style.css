@@ -66,16 +66,47 @@ h4{
     text-align:center;
   }
 
-  /* styling body login */
-.loginstyle {
-  background-repeat: no-repeat;
-  background-image: url("../image/log.jpg");
-  font-family: Calibri, Helvetica, sans-serif;  
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  margin:0;
+
+.tableContainer{
+  width: 1000px;
+  height: 100%;  
+  padding: 25px; 
+  border : 6px groove;
+  border-color:orange; 
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.errorContainer{
+  width: 350px;
+  height: 100%;  
+  padding: 25px; 
+  border : 6px groove;
+  border-color:orange; 
+  background-color: white;
+  justify-content: center;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#resize {
+  width: 50px;
+  height: auto;
+}
+
+
+body {
+    background-repeat: no-repeat;
+    background-image: url("../image/log.jpg");
+    font-family: Calibri, Helvetica, sans-serif;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin:0;
+
 }
 
 .footer-text{

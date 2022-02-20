@@ -3,8 +3,14 @@ const URL = 'http://localhost:7000';
 
 function handleErrors(response) {
     if (!response.ok) {
+        if (response.status == 403){
+            window.location.href = "forbiddenError.html"
+        }else if (response.status == 500){
+            window.location.href = "internalServerError.html"
+        }
         throw Error(response.statusText);
-    }
+    } 
+
     return response;
 }
 
@@ -28,7 +34,9 @@ let post = async () => {
     .then(handleErrors)
     .then((res)=> {
         if (res.status == 200) {
-            window.location.href = "http://localhost:7000/homePage.html"
+
+            window.location.href = "homePage.html"
+
           }else {
             throw Error(response.statusText);
           }
@@ -38,7 +46,18 @@ let post = async () => {
     
 }
 
-let submitRequest = document.getElementById('submitRequest').addEventListener('click', post);
+
+(()=>{
+    document.getElementById('navbar').removeAttribute('hidden')
+    document.getElementById('welcomeMessage').removeAttribute('hidden')
+    document.getElementById('mainContainer').removeAttribute('hidden')
+    document.getElementById('footer').removeAttribute('hidden')
+    document.getElementById('submitRequest').removeAttribute('hidden')
+    document.getElementById('accountInfo').removeAttribute('hidden')
+})();
+
+
+let submitRequest = document.getElementById('submitRequestButton').addEventListener('click', post);
 
 
 

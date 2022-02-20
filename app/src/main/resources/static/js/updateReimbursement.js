@@ -4,8 +4,15 @@ const USERNAME = getCookie('reimbId');
 
 function handleErrors(response) {
     if (!response.ok) {
+
+        if (response.status == 403){
+            window.location.href = "forbiddenError.html"
+        }else if (response.status == 500){
+            window.location.href = "internalServerError.html"
+        }
         throw Error(response.statusText);
-    }
+    } 
+
     return response;
 }
 
@@ -30,6 +37,14 @@ let reimbId;
 (()=>{
     let apiUrl = `${URL}/reimbursement-by-id`;
     fetch(apiUrl)
+
+    .then(handleErrors)
+    document.getElementById('navbar').removeAttribute('hidden')
+    document.getElementById('welcomeMessage').removeAttribute('hidden')
+    document.getElementById('mainContainer').removeAttribute('hidden')
+    document.getElementById('footer').removeAttribute('hidden')
+    document.getElementById('viewEmployees').removeAttribute('hidden')
+
         .then((res) => res.json())
         .then((data) => {
             document.getElementById('cell1').innerHTML = "Reimbursement Id: " + `${data.reimbId}`
@@ -62,7 +77,10 @@ let put = async () => {
     .then(handleErrors)
     .then((res)=> {
         if (res.status == 200) {
-            window.location.href = "http://localhost:7000/homePage.html"
+
+
+            window.location.href = "homePage.html"
+f9
           }else {
             throw Error(response.statusText);
           }

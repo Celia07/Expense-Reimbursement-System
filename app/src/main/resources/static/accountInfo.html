@@ -1,11 +1,50 @@
-<!DOCTYPE html>
+
+<!Doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home Page Test</title>
-</head>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link  rel="stylesheet" href="css/bootstrap.min.css">
+    <link  rel="stylesheet" href="css/style.css">
+
+    <title> View Account Info </title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id = "navbar" hidden>
+    <div class="container-fluid">
+          <a class="navbar-brand" href="#">ERS</a>
+          <a class="navbar-brand" href="#" style="max-width: 30%;">
+            <img id="resize" src="image/ESR.png" class="img-fluid">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="homePage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="submitRequest.html" id = "submitRequest" hidden>Submit a new Request</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="employees.html" id = "viewEmployees" hidden>View All Employees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="accountInfo.html" id="accountInfo" hidden>View Account Info</a>
+              </li>
+                <a class="nav-link active" aria-current="page" href="logoutPage.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+  </nav>
 <body>
-    <h1 id = 'welcomeMessage'>View/Update Account Information</h1>
+    <h1 id = 'welcomeMessage' hidden>View/Update Account Information</h1>
+
+    <div class="container" id = "mainContainer" hidden>
 
     <div>
         <p id = "cell1">Employee ID: </p>
@@ -49,12 +88,15 @@
     <button id="submitPassButton" hidden>Submit New Password</button>
     </div>
 
-    <div>
-        <p>Click  
-            <a href = "http://localhost:7000/homePage.html">here</a>
-             to go back to the Home Page</p></p>
-    </div>
+
+</div>
     
-    <script src="./js/accountInfo.js"></script>
+    
 </body>
+<footer id = "footer" hidden>
+    <h6 class="footer-text"> Copyright Project 01(Bryan & Celia) </h6>
+  </footer>
+<script src="./js/accountInfo.js"></script>
+<script src="./js/bootstrap.bundle.min.js" ></script>
+
 </html>
