@@ -260,14 +260,8 @@ function populateResolvedTable(data){
             document.getElementById('mainContainer').removeAttribute('hidden')
             document.getElementById('footer').removeAttribute('hidden')
             if(data.userRole == "EMPLOYEE"){
-<<<<<<< HEAD
-                document.getElementById('accountInfo').removeAttribute("hidden");
-                document.getElementById('submitOption').removeAttribute("hidden");
-                document.getElementById('viewInfo').removeAttribute("hidden");
-=======
                 document.getElementById('submitRequest').removeAttribute("hidden");
                 document.getElementById('accountInfo').removeAttribute("hidden");
->>>>>>> 7fe0cf47673571f5bf8020dad373989311afb260
                 let apiUrl2 = `${URL}/user/user-pending`;
                 fetch(apiUrl2)
                 .then(handleErrors)
